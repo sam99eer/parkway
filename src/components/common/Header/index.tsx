@@ -46,7 +46,16 @@ const Header = (props: { activeLink: LINKS }) => {
                         width={150}
                     />
                 </Navbar.Brand>
-                <Navbar.Toggle aria-controls='basic-navbar-nav' />
+                <Navbar.Toggle
+                    className={styles.toggleBtn}
+                    aria-controls='basic-navbar-nav'
+                >
+                    <div>
+                        <span className={styles.line}></span>
+                        <span className={styles.line}></span>
+                        <span className={styles.line}></span>
+                    </div>
+                </Navbar.Toggle>
                 <Navbar.Collapse id='basic-navbar-nav'>
                     <Nav className='mx-auto my-4 my-lg-0 gap-5'>
                         <Link

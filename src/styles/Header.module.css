@@ -62,3 +62,20 @@
     align-items: center;
     border-radius: 20px;
 }
+
+.line {
+    width: 40px;
+    height: 5px;
+    background-color: var(--parkway-white);
+    display: block;
+    margin: 8px auto;
+}
+
+.toggleBtn {
+    outline: none;
+    border: 1px solid var(--parkway-white);
+}
+
+/* .toggleBtn:focus {
+    box-shadow: none;
+} */

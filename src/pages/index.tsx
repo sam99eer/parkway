@@ -68,6 +68,7 @@ const Home = () => {
                     </Row>
                 </Container>
             </div>
+            <p>hi</p>
         </>
     );
 };
