@@ -1,5 +1,12 @@
+import Header from '@/components/common/Header';
+import { LINKS } from '@/constants/Links';
+
 const Home = () => {
-    return <div>Home</div>;
+    return (
+        <div>
+            <Header activeLink={LINKS.HOME} />
+        </div>
+    );
 };
 
 export default Home;
