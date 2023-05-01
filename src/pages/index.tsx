@@ -1,5 +1,9 @@
+import Chair from '@/assets/icons/chair.png';
+import Nurse from '@/assets/icons/nurse.png';
+import Stethoscope from '@/assets/icons/stethoscope.png';
 import SmilingMan from '@/assets/images/smiling_man.png';
 import Header from '@/components/common/Header';
+import TagCard from '@/components/page/home/TagCard';
 import { LINKS } from '@/constants/Links';
 import styles from '@/styles/Home.module.css';
 import Image from 'next/image';
@@ -32,6 +36,33 @@ const Home = () => {
                                 alt='Old Man Smiling'
                                 className='img-fluid'
                                 width={400}
+                            />
+                        </Col>
+                    </Row>
+                </Container>
+            </div>
+            <div className={styles.tags}>
+                <Container>
+                    <Row>
+                        <Col md={4}>
+                            <TagCard
+                                source={Stethoscope}
+                                text='Lorem ipsum dolor sit'
+                                onClick={() => {}}
+                            />
+                        </Col>
+                        <Col md={4}>
+                            <TagCard
+                                source={Nurse}
+                                text='Lorem ipsum dolor sit'
+                                onClick={() => {}}
+                            />
+                        </Col>
+                        <Col md={4}>
+                            <TagCard
+                                source={Chair}
+                                text='Lorem ipsum dolor sit'
+                                onClick={() => {}}
                             />
                         </Col>
                     </Row>

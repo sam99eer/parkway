@@ -2,11 +2,13 @@
     position: sticky;
     top: 0;
     z-index: 9;
+    transition: all 0.3s ease-in-out;
 }
 
 .navbar_scroll {
     background-color: rgba(0, 0, 0, 0.2);
-    backdrop-filter: 10px;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
 }
 
 .middleLink {

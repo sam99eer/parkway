@@ -48,7 +48,7 @@ const Header = (props: { activeLink: LINKS }) => {
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls='basic-navbar-nav' />
                 <Navbar.Collapse id='basic-navbar-nav'>
-                    <Nav className='mx-auto gap-5'>
+                    <Nav className='mx-auto my-4 my-lg-0 gap-5'>
                         <Link
                             className={`${styles.middleLink} ${
                                 props.activeLink === LINKS.HOME
@@ -100,7 +100,9 @@ const Header = (props: { activeLink: LINKS }) => {
                             Contact us
                         </Link>
                     </Nav>
-                    <Nav className={styles.icons}>
+                    <Nav
+                        className={`${styles.icons} flex-row justify-content-center justify-content-lg-end`}
+                    >
                         <Link href={LINKS.HOME}>
                             <Image src={FB} alt='FB' />
                         </Link>
