@@ -13,6 +13,11 @@ import Navbar from 'react-bootstrap/Navbar';
 
 const Header = (props: { activeLink: LINKS }) => {
     const [isScrolled, setIsScrolled] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    const toggleHandler = () => {
+        setMenuOpen((oldState) => !oldState);
+    };
 
     useEffect(() => {
         const handleScroll = () => {
@@ -49,8 +54,13 @@ const Header = (props: { activeLink: LINKS }) => {
                 <Navbar.Toggle
                     className={styles.toggleBtn}
                     aria-controls='basic-navbar-nav'
+                    onClick={toggleHandler}
                 >
-                    <div>
+                    <div
+                        className={`${styles.hamburger} ${
+                            menuOpen ? styles.is_active : ''
+                        }`}
+                    >
                         <span className={styles.line}></span>
                         <span className={styles.line}></span>
                         <span className={styles.line}></span>
