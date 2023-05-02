@@ -189,6 +189,43 @@
     text-decoration: underline;
 }
 
+.gallery {
+    background-color: var(--parkway-white);
+}
+
+.gallery > h1 {
+    text-align: center;
+}
+
+.reach {
+    padding: 3.5rem 0rem;
+    background-color: var(--parkway-light-grey);
+}
+
+.reach > div :is(h1, h2, p) {
+    text-align: center;
+}
+
+.reach textarea {
+    resize: none;
+}
+
+.reach button {
+    outline: none;
+    border: none;
+    color: var(--parkway-light-white);
+    background-color: var(--parkway-tertiary);
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    padding: 0.5rem 0rem;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.reach button:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
 @media only screen and (min-width: 0px) and (max-width: 767px) {
     .mission_details {
         padding: 1rem 2rem;
