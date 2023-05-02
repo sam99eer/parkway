@@ -20,8 +20,8 @@ import Row from 'react-bootstrap/Row';
 const Home = () => {
     return (
         <>
+            <Header activeLink={LINKS.HOME} />
             <section className={styles.home}>
-                <Header activeLink={LINKS.HOME} />
                 <Container className='py-5'>
                     <Row className='align-items-center p-4'>
                         <Col className={styles.details} md={6}>

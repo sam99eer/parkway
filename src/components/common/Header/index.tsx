@@ -66,7 +66,10 @@ const Header = (props: { activeLink: LINKS }) => {
                         <span className={styles.line}></span>
                     </div>
                 </Navbar.Toggle>
-                <Navbar.Collapse id='basic-navbar-nav'>
+                <Navbar.Collapse
+                    id='basic-navbar-nav'
+                    className={`${isScrolled ? '' : styles.menu_box}`}
+                >
                     <Nav className='mx-auto my-4 my-lg-0 gap-5'>
                         <Link
                             className={`${styles.middleLink} ${
