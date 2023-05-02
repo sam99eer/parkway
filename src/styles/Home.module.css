@@ -158,3 +158,39 @@
     width: 100%;
     display: flex;
 }
+
+.mission {
+    background-color: var(--parkway-white);
+    padding: 3.75rem 0rem;
+}
+
+.mission_details {
+    text-align: center;
+    padding: 0rem 5.75rem;
+    align-self: center;
+}
+
+.mission_details p {
+    padding: 1rem 0rem;
+    margin: 0;
+    font-size: 1.125rem;
+}
+
+.mission_details p span {
+    color: var(--parkway-saffron);
+}
+
+.mission_details p .link {
+    color: var(--parkway-text-link);
+    cursor: pointer;
+}
+
+.mission_details p .link:hover {
+    text-decoration: underline;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+    .mission_details {
+        padding: 1rem 2rem;
+    }
+}
