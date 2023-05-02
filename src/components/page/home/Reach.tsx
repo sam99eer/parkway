@@ -29,7 +29,7 @@ const Reach = () => {
                     Get your questions or concerns answered in real-time. Reach
                     out to us by sending us a message today.
                 </p>
-                <Row className='py-3'>
+                <Row className='py-3 gap-4 gap-md-0'>
                     <Col md={6}>
                         <input
                             type='text'

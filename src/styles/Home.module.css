@@ -132,6 +132,7 @@
     background-color: var(--parkway-light-grey);
     padding: 3rem 0rem;
     overflow: hidden;
+    display: flex;
 }
 
 .slide_image {
