@@ -32,11 +32,17 @@ const Home = () => {
                                 home located in a quiet neighborhood in the
                                 center of Ephrata, Washington.
                             </p>
-                            <Link className={styles.btn} href='/#contact'>
+                            <Link
+                                className={`${styles.btn} mx-auto mx-md-0`}
+                                href='/#contact'
+                            >
                                 Get in touch
                             </Link>
                         </Col>
-                        <Col md={6}>
+                        <Col
+                            md={6}
+                            className='d-flex justify-content-center justify-content-md-start py-2 py-md-0'
+                        >
                             <Image
                                 src={SmilingMan}
                                 alt='Old Man Smiling'
