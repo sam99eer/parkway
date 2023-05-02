@@ -183,10 +183,26 @@
 .mission_details p .link {
     color: var(--parkway-text-link);
     cursor: pointer;
+    position: relative;
 }
 
-.mission_details p .link:hover {
-    text-decoration: underline;
+.mission_details p .link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    border-radius: 5px;
+    height: 0.05em;
+    bottom: 0;
+    left: 0;
+    background: var(--parkway-text-link);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.mission_details p .link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 .gallery {

@@ -19,7 +19,7 @@ const Mission = () => {
                         able to decorate and furnish their own living spaces in
                         a way that reminds them of their own home complete with
                         family pictures. We will offer both individual rooms as
-                        well as double occupancy .{' '}
+                        well as double occupancy.{' '}
                         <span className={styles.link}>Know More</span>
                     </p>
                 </Col>
