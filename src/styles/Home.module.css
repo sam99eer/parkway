@@ -143,10 +143,6 @@
     align-items: center;
 }
 
-.slide_image:last-child {
-    animation-delay: 15s;
-}
-
 .slide_image:hover {
     border-color: var(--parkway-black);
 }
