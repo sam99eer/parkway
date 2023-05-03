@@ -138,6 +138,9 @@
 .slide_image {
     padding: 1rem;
     border: 1px solid transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .slide_image:last-child {
@@ -246,5 +249,9 @@
 @media only screen and (min-width: 0px) and (max-width: 767px) {
     .mission_details {
         padding: 1rem 2rem;
+    }
+
+    .slide_image:hover {
+        border-color: transparent;
     }
 }

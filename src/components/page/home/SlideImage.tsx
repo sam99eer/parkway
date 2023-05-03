@@ -4,7 +4,7 @@ import Image, { StaticImageData } from 'next/image';
 const SlideImage = (props: { text: string; img: StaticImageData }) => {
     return (
         <div className={styles.slide_image}>
-            <Image src={props.img} alt={props.text} />
+            <Image src={props.img} alt={props.text} className='img-fluid' />
             <p>{props.text}</p>
         </div>
     );
