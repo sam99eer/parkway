@@ -62,9 +62,45 @@
     padding: 0.5rem 0rem;
 }
 
+.vision {
+    padding: 2.5rem 0rem;
+    background-color: var(--parkway-white);
+}
+
+.vision .data > div > div {
+    background-color: var(--parkway-gray);
+    border-radius: 1.25rem;
+    padding: 1.25rem;
+    color: var(--parkway-white);
+    margin: 1rem 0rem;
+}
+
+.vision .data > div > div > h1 {
+    padding: 0.5rem 0rem;
+}
+
+.vision .data > div > div > p {
+    font-size: 1.15rem;
+}
+
+.reach {
+    text-align: center;
+    padding: 2.5rem 0rem 0rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.reach span {
+    color: var(--parkway-light-saffron);
+}
+
 @media only screen and (min-width: 0px) and (max-width: 767px) {
     .highlight {
         max-width: 100%;
         font-size: 1.5rem;
+    }
+
+    .about {
+        background-position: inherit;
     }
 }
