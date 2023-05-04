@@ -1,0 +1,70 @@
+.about {
+    min-height: 60vh;
+    min-height: 60svh;
+    background-image: url('../assets/images/about_banner.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 10rem;
+    position: relative;
+}
+
+.about > h1 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: var(--parkway-white);
+    background-color: var(--parkway-banner-bg);
+    margin: 0;
+    padding: 1rem 0rem;
+}
+
+.who_we_are {
+    background-color: var(--parkway-grey);
+    padding: 1.5rem 0rem;
+}
+
+.breadcrumb {
+    padding: 1rem 0rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--parkway-black);
+    border-bottom: 1px solid var(--parkway-stroke);
+}
+
+.highlight {
+    color: var(--parkway-black);
+    text-align: center;
+    font-size: 2.25rem;
+    background-color: var(--parkway-white);
+    border: 2px solid var(--parkway-stroke);
+    border-radius: 30px;
+    padding: 1.5rem 0rem;
+    margin: 3rem auto;
+    box-shadow: 0px 6px 12px -6px var(--parkway-black);
+    max-width: 70%;
+}
+
+.details h1 {
+    color: var(--parkway-black);
+    font-weight: 700;
+    padding: 1rem 0rem;
+}
+
+.details span {
+    color: var(--parkway-dark-saffron);
+}
+
+.details p {
+    font-size: 1.25rem;
+    font-weight: 600;
+    padding: 0.5rem 0rem;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+    .highlight {
+        max-width: 100%;
+        font-size: 1.5rem;
+    }
+}
