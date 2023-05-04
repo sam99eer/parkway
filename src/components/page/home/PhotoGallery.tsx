@@ -1,35 +1,55 @@
-import home1 from '@/assets/images/home1.jpg';
-import home2 from '@/assets/images/home2.jpg';
-import home3 from '@/assets/images/home3.jpg';
-import home4 from '@/assets/images/home4.jpg';
+import { GalleryImages } from '@/constants/Data';
 import styles from '@/styles/Home.module.css';
 import Image from 'next/image';
+import { useState } from 'react';
+import { FreeMode, Navigation, Thumbs } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 const PhotoGallery = () => {
+    const [thumbsSwiper, setThumbsSwiper] = useState(null);
+
     return (
         <section className={styles.gallery}>
             <h1>Our Photogallery</h1>
+            <Swiper
+                initialSlide={1}
+                slidesPerView={2}
+                centeredSlides={true}
+                spaceBetween={0}
+                className='gallery-slider'
+                navigation
+                modules={[Navigation, Thumbs]}
+                thumbs={{ swiper: thumbsSwiper }}
+            >
+                {GalleryImages.map((item, index) => (
+                    <SwiperSlide key={`gallery_img_${index}`}>
+                        <Image
+                            src={item.img}
+                            alt={item.alt}
+                            className='img-fluid'
+                        />
+                    </SwiperSlide>
+                ))}
+            </Swiper>
 
             <Swiper
+                spaceBetween={10}
                 slidesPerView={4}
-                spaceBetween={20}
-                centeredSlides
-                autoplay
-                className='mySwiper'
+                freeMode={true}
+                watchSlidesProgress={true}
+                modules={[FreeMode, Navigation, Thumbs]}
+                className='swiper-preview'
+                onSwiper={() => {}}
             >
-                <SwiperSlide>
-                    <Image src={home1} alt='pic' className='img-fluid' />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image src={home2} alt='pic' className='img-fluid' />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image src={home3} alt='pic' className='img-fluid' />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Image src={home4} alt='pic' className='img-fluid' />
-                </SwiperSlide>
+                {GalleryImages.map((item, index) => (
+                    <SwiperSlide key={`preview_img_${index}`}>
+                        <Image
+                            src={item.img}
+                            alt={item.alt}
+                            className='img-fluid'
+                        />
+                    </SwiperSlide>
+                ))}
             </Swiper>
         </section>
     );

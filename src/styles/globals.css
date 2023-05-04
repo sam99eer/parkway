@@ -39,3 +39,41 @@ a {
     src: url('/fonts/AgencyFB.ttf') format('truetype');
     font-display: swap;
 }
+
+.gallery-slider {
+    position: relative;
+}
+
+.gallery-slider .swiper-slide {
+    transition: all 0.3s ease-in-out;
+}
+
+.gallery-slider .swiper-slide-active {
+    border: 1px solid var(--parkway-dark-grey);
+    padding: 1rem;
+}
+
+.gallery-slider .swiper-slide-prev,
+.gallery-slider .swiper-slide-next {
+    scale: 0.75;
+    opacity: 0.7;
+}
+
+.gallery-slider .swiper-button-prev:after,
+.gallery-slider .swiper-button-next:after {
+    background-color: var(--parkway-black);
+    color: var(--parkway-white);
+    font-size: 14px;
+    border-radius: 16px;
+    font-weight: bold;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-preview {
+    max-width: 50%;
+    margin: 3rem 0rem;
+}

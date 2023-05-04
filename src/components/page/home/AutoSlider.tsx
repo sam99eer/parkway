@@ -4,7 +4,7 @@ import Sl_Image3 from '@/assets/images/moving_slide3.jpg';
 import Sl_Image4 from '@/assets/images/moving_slide4.jpg';
 import SlideImage from '@/components/page/home/SlideImage';
 import styles from '@/styles/Home.module.css';
-import { Autoplay, Navigation, Pagination } from 'swiper';
+import { Autoplay, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 const AutoSlider = () => {
@@ -21,7 +21,7 @@ const AutoSlider = () => {
                     delay: 1500,
                     disableOnInteraction: false,
                 }}
-                modules={[Autoplay, Pagination, Navigation]}
+                modules={[Autoplay, Pagination]}
                 breakpoints={{
                     768: {
                         slidesPerView: 2,

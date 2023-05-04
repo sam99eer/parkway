@@ -3,7 +3,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import 'swiper/css';
+import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import 'swiper/css/thumbs';
 
 export default function App({ Component, pageProps }: AppProps) {
     return (
