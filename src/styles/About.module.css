@@ -33,6 +33,10 @@
     border-bottom: 1px solid var(--parkway-stroke);
 }
 
+.breadcrumb span {
+    color: var(--parkway-breadcrumb);
+}
+
 .highlight {
     color: var(--parkway-black);
     text-align: center;

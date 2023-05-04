@@ -7,7 +7,9 @@ const WhoWeAre = () => {
     return (
         <section className={styles.who_we_are}>
             <Container>
-                <p className={styles.breadcrumb}>Home ~~ About Us</p>
+                <p className={styles.breadcrumb}>
+                    <span>Home</span> ~~ About Us
+                </p>
                 <p className={styles.highlight}>
                     Ensuring your loved ones’ wellness and safety
                 </p>

@@ -1,0 +1,20 @@
+const Telephone = () => {
+    return (
+        <svg
+            xmlns='http://www.w3.org/2000/svg'
+            xmlnsXlink='http://www.w3.org/1999/xlink'
+            width='38px'
+            height='38px'
+        >
+            <image
+                x='0px'
+                y='0px'
+                width='38px'
+                height='38px'
+                xlinkHref='data:img/png;base64,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'
+            />
+        </svg>
+    );
+};
+
+export default Telephone;
