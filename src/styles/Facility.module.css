@@ -1,0 +1,62 @@
+.facility {
+    min-height: 60vh;
+    min-height: 60svh;
+    background-image: url('../assets/images/banner_facilities.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 10rem;
+    position: relative;
+}
+
+.facility > h1 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: var(--parkway-white);
+    background-color: var(--parkway-banner-bg);
+    margin: 0;
+    padding: 1rem 0rem;
+}
+
+.breadcrumb {
+    padding: 1rem 0rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--parkway-black);
+    border-bottom: 1px solid var(--parkway-stroke);
+}
+
+.breadcrumb span {
+    color: var(--parkway-breadcrumb);
+}
+
+.reach {
+    text-align: center;
+    padding: 2.5rem 0rem 0rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.reach span {
+    color: var(--parkway-light-saffron);
+}
+
+.details > p {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.45rem;
+    padding: 3rem 0rem 1rem;
+}
+
+.facilities .details {
+    max-width: 85%;
+    margin: 1rem auto;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+    .facilities .details {
+        max-width: 100%;
+    }
+}
