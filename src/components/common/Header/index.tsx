@@ -130,11 +130,11 @@ const Header = (props: { activeLink: LINKS }) => {
                             <Fb />
                         </Link>
 
-                        <Link href={LINKS.HOME}>
+                        <Link href='tel:509-237-7297'>
                             <Mobile />
                         </Link>
 
-                        <Link href={LINKS.HOME}>
+                        <Link href='mailto:parkwayadulthomecare@yahoo.com'>
                             <Mail />
                         </Link>
                     </Nav>

@@ -10,34 +10,74 @@ const ServiceHighlights = () => {
 
                 <div className={styles.service_container}>
                     <Row>
-                        <Col className='my-4' md={6}>
+                        <Col
+                            className='my-4'
+                            md={6}
+                            data-aos='fade-right'
+                            data-aos-delay='100'
+                        >
                             <ServiceItem text='Owners reside in the home and therefore, they are able to evaluate residents changing needs in a timely manner' />
                         </Col>
-                        <Col className='my-4' md={6}>
+                        <Col
+                            className='my-4'
+                            md={6}
+                            data-aos='fade-left'
+                            data-aos-delay='100'
+                        >
                             <ServiceItem text='Home doctor and therapists visits' />
                         </Col>
                     </Row>
                     <Row>
-                        <Col className='my-4' md={6}>
+                        <Col
+                            className='my-4'
+                            md={6}
+                            data-aos='fade-right'
+                            data-aos-delay='100'
+                        >
                             <ServiceItem text='Professionally trained staff available 24 hours a day' />
                         </Col>
-                        <Col className='my-4' md={6}>
+                        <Col
+                            className='my-4'
+                            md={6}
+                            data-aos='fade-left'
+                            data-aos-delay='100'
+                        >
                             <ServiceItem text='Activity/Exercise coordinator on staff' />
                         </Col>
                     </Row>
                     <Row>
-                        <Col className='my-4' md={6}>
+                        <Col
+                            className='my-4'
+                            md={6}
+                            data-aos='fade-right'
+                            data-aos-delay='100'
+                        >
                             <ServiceItem text='Wheelchair/walker accommodations' />
                         </Col>
-                        <Col className='my-4' md={6}>
+                        <Col
+                            className='my-4'
+                            md={6}
+                            data-aos='fade-left'
+                            data-aos-delay='100'
+                        >
                             <ServiceItem text='Personal call button and emergency call system' />
                         </Col>
                     </Row>
                     <Row>
-                        <Col className='my-4' md={6}>
+                        <Col
+                            className='my-4'
+                            md={6}
+                            data-aos='fade-right'
+                            data-aos-delay='100'
+                        >
                             <ServiceItem text='Medication assistance and monitoring; coordination with doctors and pharmacy' />
                         </Col>
-                        <Col className='my-4' md={6}>
+                        <Col
+                            className='my-4'
+                            md={6}
+                            data-aos='fade-left'
+                            data-aos-delay='100'
+                        >
                             <ServiceItem text="Alzheimer's/Dementia certified" />
                         </Col>
                     </Row>
