@@ -8,7 +8,12 @@ const Hero = (props: { onScroll: () => void }) => {
         <section className={styles.home}>
             <Container className='py-5'>
                 <Row className='align-items-center p-4'>
-                    <Col className={styles.details} md={6}>
+                    <Col
+                        className={styles.details}
+                        md={6}
+                        data-aos='zoom-in'
+                        data-aos-delay='200'
+                    >
                         <h1>Lending Our Hand for the Service of Others</h1>
                         <p>
                             We offer senior citizen care in a single family home
@@ -31,6 +36,8 @@ const Hero = (props: { onScroll: () => void }) => {
                             alt='Old Man Smiling'
                             className='img-fluid'
                             width={400}
+                            data-aos='flip-right'
+                            data-aos-delay='450'
                         />
                     </Col>
                 </Row>

@@ -12,6 +12,8 @@ const PhotoGallery = () => {
         <section className={styles.gallery}>
             <h1>Our Photogallery</h1>
             <Swiper
+                data-aos='flip-right'
+                data-aos-delay='150'
                 initialSlide={1}
                 slidesPerView={2}
                 centeredSlides={true}

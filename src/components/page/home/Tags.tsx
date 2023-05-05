@@ -8,7 +8,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 const Tags = () => {
     return (
         <section className={styles.tags}>
-            <Container>
+            <Container data-aos='fade-up' data-aos-delay='100'>
                 <Row>
                     <Col md={4}>
                         <TagCard

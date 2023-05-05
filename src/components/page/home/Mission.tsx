@@ -7,7 +7,12 @@ const Mission = () => {
     return (
         <section className={styles.mission}>
             <Row className='g-0'>
-                <Col className={styles.mission_details} md={6}>
+                <Col
+                    className={styles.mission_details}
+                    md={6}
+                    data-aos='fade-right'
+                    data-aos-delay='150'
+                >
                     <h1>Our Mission</h1>
                     <p>
                         The mission and intent of PARKWAY{' '}
@@ -25,9 +30,15 @@ const Mission = () => {
                 </Col>
                 <Col
                     md={6}
-                    className='d-flex justify-content-center justify-content-md-end'
+                    className='d-flex overflow-hidden justify-content-center justify-content-md-end'
                 >
-                    <Image src={QuadPic} alt='Quad' className='img-fluid' />
+                    <Image
+                        src={QuadPic}
+                        alt='Quad'
+                        className='img-fluid '
+                        data-aos='fade-left'
+                        data-aos-delay='150'
+                    />
                 </Col>
             </Row>
         </section>

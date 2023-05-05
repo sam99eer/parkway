@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container';
 const Welcome = () => {
     return (
         <section className={styles.welcome}>
-            <Container>
+            <Container data-aos='fade-right' data-aos-delay='150'>
                 <p>Welcome To</p>
                 <h1>Parkway Adult Family Homecare</h1>
                 <p>
