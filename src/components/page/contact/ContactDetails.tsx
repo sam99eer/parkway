@@ -70,7 +70,11 @@ const ContactDetails = () => {
                     </Row>
                 </div>
 
-                <p className={styles.reach}>
+                <p
+                    className={styles.reach}
+                    data-aos='fade-up'
+                    data-aos-delay='200'
+                >
                     <span>Reach Out</span> to us today if you have any questions
                     or need additional information about our facility and the
                     services we offer.

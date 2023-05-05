@@ -5,14 +5,26 @@ const ServiceDetails = () => {
     return (
         <section className={styles.service}>
             <Container>
-                <p className={styles.breadcrumb}>
+                <p
+                    className={styles.breadcrumb}
+                    data-aos='fade-right'
+                    data-aos-delay='200'
+                >
                     <span>Home</span> ~~ Our Services
                 </p>
-                <p className={styles.highlight}>
+                <p
+                    className={styles.highlight}
+                    data-aos='zoom-in'
+                    data-aos-delay='200'
+                >
                     Our genuine services offer specialized care that truly
                     matters
                 </p>
-                <p className={styles.service_para}>
+                <p
+                    className={styles.service_para}
+                    data-aos='fade-up'
+                    data-aos-delay='200'
+                >
                     We offer senior citizen care in a single family home. So,
                     our door and windows are equipped with sensors that alert us
                     to any potential wandering of residents. As well, we also

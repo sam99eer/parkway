@@ -6,8 +6,8 @@ const Vision = () => {
         <section className={styles.vision}>
             <Container>
                 <Row className={styles.data}>
-                    <Col md={6} lg={8}>
-                        <div>
+                    <Col md={6} lg={8} className='overflow-hidden'>
+                        <div data-aos='fade-right' data-aos-delay='200'>
                             <h1>Our Staff</h1>
                             <p>
                                 Parkway Adult Family Home owned and operated by
@@ -21,8 +21,8 @@ const Vision = () => {
                             </p>
                         </div>
                     </Col>
-                    <Col md={6} lg={4} className='d-flex'>
-                        <div>
+                    <Col md={6} lg={4} className='d-flex overflow-hidden'>
+                        <div data-aos='fade-left' data-aos-delay='200'>
                             <h1>Our Vision</h1>
                             <p>
                                 Our vision is to be the most trusted adult
@@ -32,7 +32,11 @@ const Vision = () => {
                         </div>
                     </Col>
                 </Row>
-                <p className={styles.reach}>
+                <p
+                    className={styles.reach}
+                    data-aos='fade-up'
+                    data-aos-delay='200'
+                >
                     <span>Reach Out</span> to us today if you have any questions
                     or need additional information about our facility and the
                     services we offer.
