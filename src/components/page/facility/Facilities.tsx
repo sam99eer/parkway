@@ -14,12 +14,16 @@ const Facilities = () => {
     return (
         <section className={styles.facilities}>
             <Container>
-                <p className={styles.breadcrumb}>
+                <p
+                    className={styles.breadcrumb}
+                    data-aos='fade-right'
+                    data-aos-delay='200'
+                >
                     <span>Home</span> ~~ Facility
                 </p>
 
                 <div className={styles.details}>
-                    <p>
+                    <p data-aos='zoom-in' data-aos-delay='200'>
                         We stay true to our commitment to keeping our residents
                         safe and comfortable. At our facility, your loved ones
                         can enjoy a wide variety of amenities that include:

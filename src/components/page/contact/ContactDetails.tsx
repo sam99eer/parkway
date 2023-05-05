@@ -9,12 +9,16 @@ const ContactDetails = () => {
     return (
         <section className={styles.contactus}>
             <Container>
-                <p className={styles.breadcrumb}>
+                <p
+                    className={styles.breadcrumb}
+                    data-aos='fade-right'
+                    data-aos-delay='200'
+                >
                     <span>Home</span> ~~ Contact Us
                 </p>
 
                 <div className={styles.contact_details}>
-                    <p>
+                    <p data-aos='zoom-in' data-aos-delay='200'>
                         Do you have any inquiries about our services? We are
                         always here for you. We’ll respond to you as soon as we
                         can.

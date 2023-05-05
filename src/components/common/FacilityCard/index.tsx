@@ -13,6 +13,8 @@ const FacilityCard = (props: {
             className={`${styles.facility_card} ${
                 !!props.inverted ? styles.inverted_card : ''
             }`}
+            data-aos={!!props.inverted ? 'fade-left' : 'fade-right'}
+            data-aos-delay='200'
         >
             <h2>
                 {props.text}
