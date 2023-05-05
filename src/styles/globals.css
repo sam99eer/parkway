@@ -90,3 +90,9 @@ a {
     max-width: 50%;
     margin: 3rem 0rem;
 }
+
+.error {
+    color: var(--parkway-dark-saffron);
+    font-size: 0.8rem;
+    margin: 0;
+}

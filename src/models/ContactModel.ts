@@ -3,3 +3,9 @@ export interface IContactInterface {
     email: string;
     message: string;
 }
+
+export interface IContactErrorInterface {
+    fullname: boolean;
+    email: boolean;
+    message: boolean;
+}
