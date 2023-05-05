@@ -3,7 +3,7 @@ import styles from '@/styles/Home.module.css';
 import { useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 
-const Reach = () => {
+const Reach = (props: { contactRef: React.RefObject<HTMLDivElement> }) => {
     const [data, setData] = useState<IContactInterface>({
         email: '',
         fullname: '',
@@ -21,7 +21,7 @@ const Reach = () => {
     };
 
     return (
-        <section className={styles.reach}>
+        <section className={styles.reach} ref={props.contactRef}>
             <Container>
                 <h2>Reach out to us</h2>
                 <h1>Send us a message</h1>

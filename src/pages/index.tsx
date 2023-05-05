@@ -9,18 +9,25 @@ import Reach from '@/components/page/home/Reach';
 import Tags from '@/components/page/home/Tags';
 import Welcome from '@/components/page/home/Welcome';
 import { LINKS } from '@/constants/Links';
+import { useRef } from 'react';
 
 const Home = () => {
+    const contactSectionRef = useRef<HTMLDivElement>(null);
+
+    const scrollHandler = () => {
+        contactSectionRef.current?.scrollIntoView();
+    };
+
     return (
         <>
             <Header activeLink={LINKS.HOME} />
-            <Hero />
+            <Hero onScroll={scrollHandler} />
             <Tags />
             <Welcome />
             <AutoSlider />
             <Mission />
             <PhotoGallery />
-            <Reach />
+            <Reach contactRef={contactSectionRef} />
             <GMap />
             <Footer />
         </>

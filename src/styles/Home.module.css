@@ -33,6 +33,7 @@
     display: flex;
     justify-content: center;
     width: 206px;
+    border: 0;
 }
 
 .btn:hover {

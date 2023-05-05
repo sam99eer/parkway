@@ -1,10 +1,9 @@
 import SmilingMan from '@/assets/images/smiling_man.png';
 import styles from '@/styles/Home.module.css';
 import Image from 'next/image';
-import Link from 'next/link';
 import { Col, Container, Row } from 'react-bootstrap';
 
-const Hero = () => {
+const Hero = (props: { onScroll: () => void }) => {
     return (
         <section className={styles.home}>
             <Container className='py-5'>
@@ -16,12 +15,12 @@ const Hero = () => {
                             located in a quiet neighborhood in the center of
                             Ephrata, Washington.
                         </p>
-                        <Link
+                        <button
                             className={`${styles.btn} mx-auto mx-md-0`}
-                            href='/#contact'
+                            onClick={props.onScroll}
                         >
                             Get in touch
-                        </Link>
+                        </button>
                     </Col>
                     <Col
                         md={6}

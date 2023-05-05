@@ -19,9 +19,10 @@
     --parkway-contact-heading: #064a72;
     --parkway-view-more: #1284a1;
     --parkway-banner-bg: rgba(72, 176, 238, 0.5);
+    --parkway-backdrop: rgba(255, 255, 255, 0.6);
     --parkway-stroke: #707070;
     --font-papyrus: 'Papyrus';
-    --font-agency: 'Agency', arial;
+    --font-agency: 'Agency FB';
 }
 
 * {
@@ -29,6 +30,10 @@
     padding: 0;
     margin: 0;
     font-family: var(--font-papyrus);
+}
+
+html {
+    scroll-padding-top: 176px;
 }
 
 a {
@@ -44,7 +49,7 @@ a {
 
 @font-face {
     font-family: var(--font-agency);
-    src: url('/fonts/AgencyFB.ttf') format('truetype');
+    src: url('/fonts/AgencyFB.woff') format('woff');
     font-display: swap;
 }
 
