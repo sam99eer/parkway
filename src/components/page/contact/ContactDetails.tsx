@@ -26,7 +26,11 @@ const ContactDetails = () => {
 
                     <Row className='gy-5 py-5'>
                         <Col lg={6} className={styles.address_container}>
-                            <div className={styles.address_info}>
+                            <div
+                                className={styles.address_info}
+                                data-aos='fade-right'
+                                data-aos-delay='200'
+                            >
                                 <div className={styles.icon}>
                                     <MapPin />
                                 </div>
@@ -43,7 +47,11 @@ const ContactDetails = () => {
                                     </a>
                                 </div>
                             </div>
-                            <div className={styles.address_info}>
+                            <div
+                                className={styles.address_info}
+                                data-aos='fade-right'
+                                data-aos-delay='200'
+                            >
                                 <div className={styles.icon}>
                                     <Telephone />
                                 </div>
@@ -58,7 +66,11 @@ const ContactDetails = () => {
                                     </p>
                                 </div>
                             </div>
-                            <div className={styles.address_info}>
+                            <div
+                                className={styles.address_info}
+                                data-aos='fade-right'
+                                data-aos-delay='200'
+                            >
                                 <div className={styles.icon}>
                                     <Email />
                                 </div>

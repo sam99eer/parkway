@@ -22,7 +22,11 @@ const ContactForm = () => {
 
     return (
         <Col lg={6}>
-            <div className={styles.send_form}>
+            <div
+                className={styles.send_form}
+                data-aos='fade-left'
+                data-aos-delay='200'
+            >
                 <h1>Send Message</h1>
                 <input
                     type='text'

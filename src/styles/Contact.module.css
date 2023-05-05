@@ -51,6 +51,7 @@
 .contactus .contact_details {
     max-width: 85%;
     margin: 1rem auto;
+    overflow: hidden;
 }
 
 .contactus .contact_details > p {
