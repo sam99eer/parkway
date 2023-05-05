@@ -106,6 +106,9 @@
     padding: 0.25rem 0rem;
     border: none;
     transition: opacity 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .send_form > button:hover {

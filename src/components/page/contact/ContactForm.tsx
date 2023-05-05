@@ -2,8 +2,10 @@ import {
     IContactErrorInterface,
     IContactInterface,
 } from '@/models/ContactModel';
+import { ILoadingModel } from '@/models/LoadingModel';
 import styles from '@/styles/Contact.module.css';
 import { useState } from 'react';
+import { Spinner } from 'react-bootstrap';
 import Col from 'react-bootstrap/Col';
 
 const ContactForm = () => {
@@ -17,6 +19,11 @@ const ContactForm = () => {
         email: false,
         fullname: false,
         message: false,
+    });
+
+    const [flag, setFlag] = useState<ILoadingModel>({
+        loading: false,
+        success: false,
     });
 
     const changeHandler = (
@@ -119,7 +126,7 @@ const ContactForm = () => {
                         ? 'Please enter atleast 10 characters'
                         : ''}
                 </p>
-                <button>Send</button>
+                <button>{flag.loading ? <Spinner /> : 'Send'}</button>
             </form>
         </Col>
     );

@@ -2,15 +2,21 @@ import {
     IContactErrorInterface,
     IContactInterface,
 } from '@/models/ContactModel';
+import { ILoadingModel } from '@/models/LoadingModel';
 import styles from '@/styles/Home.module.css';
 import { useState } from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Col, Container, Row, Spinner } from 'react-bootstrap';
 
 const Reach = (props: { contactRef: React.RefObject<HTMLDivElement> }) => {
     const [data, setData] = useState<IContactInterface>({
         email: '',
         fullname: '',
         message: '',
+    });
+
+    const [flag, setFlag] = useState<ILoadingModel>({
+        loading: false,
+        success: false,
     });
 
     const [error, setError] = useState<IContactErrorInterface>({
@@ -135,8 +141,12 @@ const Reach = (props: { contactRef: React.RefObject<HTMLDivElement> }) => {
                     </Row>
                     <Row className='pt-2'>
                         <Col>
-                            <button className='w-100' type='submit'>
-                                Send
+                            <button
+                                className='w-100 d-flex justify-content-center align-items-center'
+                                type='submit'
+                                disabled={flag.loading}
+                            >
+                                {flag.loading ? <Spinner /> : 'Send'}
                             </button>
                         </Col>
                     </Row>
