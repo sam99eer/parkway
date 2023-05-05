@@ -55,8 +55,73 @@
     margin: 1rem auto;
 }
 
+.facility_card {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.inverted_card {
+    flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+}
+
+.facility_card > h2 {
+    color: var(--parkway-black);
+    flex: 1;
+}
+
+.facility_card .arrow {
+    padding: 0rem 2rem;
+}
+
+.facility_card .inverted_arrow {
+    transform: rotate(180deg);
+}
+
+.facility_card img {
+    padding: 0.5rem;
+    border: 1px solid transparent;
+    opacity: 0.65;
+    transition: opacity 0.2s ease-in-out;
+    max-width: 100%;
+    height: auto;
+}
+
+.facility_card img:hover {
+    opacity: 1;
+    border-color: var(--parkway-black);
+}
+
 @media only screen and (min-width: 0px) and (max-width: 767px) {
     .facilities .details {
         max-width: 100%;
+    }
+
+    .facility_card {
+        flex-direction: column;
+        padding: 2rem 0rem;
+        text-align: center;
+    }
+
+    .facility_card .arrow {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1399px) {
+    .inverted_card {
+        flex-direction: row;
+        -ms-flex-direction: row;
+    }
+
+    .facility_card .inverted_arrow {
+        transform: rotate(0deg);
+    }
+
+    .facility_card .arrow {
+        flex: 1;
     }
 }

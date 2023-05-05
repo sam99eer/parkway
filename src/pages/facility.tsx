@@ -1,3 +1,4 @@
+import Footer from '@/components/common/Footer';
 import Header from '@/components/common/Header';
 import Facilities from '@/components/page/facility/Facilities';
 import Hero from '@/components/page/facility/Hero';
@@ -9,6 +10,7 @@ const Facility = () => {
             <Header activeLink={LINKS.FACILITY} />
             <Hero />
             <Facilities />
+            <Footer />
         </>
     );
 };
