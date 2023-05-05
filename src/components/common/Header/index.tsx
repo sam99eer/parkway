@@ -1,7 +1,7 @@
-import Logo from '@/assets/icons/PHlogo.png';
-import FB from '@/assets/icons/fb.png';
-import Mail from '@/assets/icons/mail.png';
-import Mobile from '@/assets/icons/mobile.png';
+import Logo from '@/assets/images/PHlogo.png';
+import Fb from '@/assets/svg/Fb';
+import Mail from '@/assets/svg/Mail';
+import Mobile from '@/assets/svg/Mobile';
 import { LINKS } from '@/constants/Links';
 import styles from '@/styles/Header.module.css';
 import Image from 'next/image';
@@ -122,17 +122,20 @@ const Header = (props: { activeLink: LINKS }) => {
                             Contact us
                         </Link>
                     </Nav>
+
                     <Nav
                         className={`${styles.icons} flex-row justify-content-center justify-content-lg-end`}
                     >
                         <Link href={LINKS.HOME}>
-                            <Image src={FB} alt='FB' />
+                            <Fb />
                         </Link>
+
                         <Link href={LINKS.HOME}>
-                            <Image src={Mail} alt='Mail' />
+                            <Mobile />
                         </Link>
+
                         <Link href={LINKS.HOME}>
-                            <Image src={Mobile} alt='Mobile' />
+                            <Mail />
                         </Link>
                     </Nav>
                 </Navbar.Collapse>

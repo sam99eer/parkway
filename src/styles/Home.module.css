@@ -91,11 +91,6 @@
     transform-origin: bottom left;
 }
 
-.tagImg {
-    max-height: 99px;
-    max-width: 99px;
-}
-
 .welcome {
     background-color: var(--parkway-white);
     padding: 5rem 0rem;

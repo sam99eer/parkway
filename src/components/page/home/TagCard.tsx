@@ -1,18 +1,13 @@
 import styles from '@/styles/Home.module.css';
-import Image, { StaticImageData } from 'next/image';
 
 const TagCard = (props: {
     text: string;
     onClick: () => void;
-    source: StaticImageData;
+    icon: React.ReactNode;
 }) => {
     return (
         <div className={styles.tagCard}>
-            <Image
-                src={props.source}
-                alt={props.text}
-                className={styles.tagImg}
-            />
+            {props.icon}
             <div className={styles.tagDetails}>
                 <p>{props.text}</p>
                 <p

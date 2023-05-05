@@ -1,6 +1,6 @@
-import Chair from '@/assets/icons/chair.png';
-import Nurse from '@/assets/icons/nurse.png';
-import Stethoscope from '@/assets/icons/stethoscope.png';
+import Chair from '@/assets/svg/Chair';
+import Nurse from '@/assets/svg/Nurse';
+import Stethoscope from '@/assets/svg/Stethoscope';
 import TagCard from '@/components/page/home/TagCard';
 import styles from '@/styles/Home.module.css';
 import { Col, Container, Row } from 'react-bootstrap';
@@ -12,21 +12,21 @@ const Tags = () => {
                 <Row>
                     <Col md={4}>
                         <TagCard
-                            source={Stethoscope}
+                            icon={<Stethoscope />}
                             text='Lorem ipsum dolor sit'
                             onClick={() => {}}
                         />
                     </Col>
                     <Col md={4}>
                         <TagCard
-                            source={Nurse}
+                            icon={<Nurse />}
                             text='Lorem ipsum dolor sit'
                             onClick={() => {}}
                         />
                     </Col>
                     <Col md={4}>
                         <TagCard
-                            source={Chair}
+                            icon={<Chair />}
                             text='Lorem ipsum dolor sit'
                             onClick={() => {}}
                         />
