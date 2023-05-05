@@ -1,7 +1,7 @@
-.about {
+.services {
     min-height: 60vh;
     min-height: 60svh;
-    background-image: url('../assets/images/about_banner.jpg');
+    background-image: url('../assets/images/banner_services.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -9,7 +9,7 @@
     position: relative;
 }
 
-.about > h1 {
+.services > h1 {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -18,11 +18,6 @@
     background-color: var(--parkway-banner-bg);
     margin: 0;
     padding: 1rem 0rem;
-}
-
-.who_we_are {
-    background-color: var(--parkway-grey);
-    padding: 1.5rem 0rem;
 }
 
 .breadcrumb {
@@ -35,6 +30,11 @@
 
 .breadcrumb span {
     color: var(--parkway-breadcrumb);
+}
+
+.service {
+    background-color: var(--parkway-grey);
+    padding: 1.5rem 0rem;
 }
 
 .highlight {
@@ -50,41 +50,16 @@
     max-width: 75%;
 }
 
-.details h1 {
-    color: var(--parkway-black);
-    font-weight: 700;
-    padding: 1rem 0rem;
-}
-
-.details span {
-    color: var(--parkway-dark-saffron);
-}
-
-.details p {
+.service_para {
     font-size: 1.25rem;
     font-weight: 600;
     padding: 0.5rem 0rem;
+    text-align: center;
 }
 
-.vision {
-    padding: 2.5rem 0rem;
+.service_highlights {
     background-color: var(--parkway-white);
-}
-
-.vision .data > div > div {
-    background-color: var(--parkway-gray);
-    border-radius: 1.25rem;
-    padding: 1.25rem;
-    color: var(--parkway-white);
-    margin: 1rem 0rem;
-}
-
-.vision .data > div > div > h1 {
-    padding: 0.5rem 0rem;
-}
-
-.vision .data > div > div > p {
-    font-size: 1.15rem;
+    padding: 1rem 0rem;
 }
 
 .reach {
@@ -98,13 +73,34 @@
     color: var(--parkway-light-saffron);
 }
 
+.service_highlights > div > h1 {
+    text-align: center;
+    font-weight: 600;
+    padding: 4rem 0rem 0rem;
+}
+
+.service_container {
+    padding: 3rem 0rem;
+}
+
+.service_item {
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
+}
+
+.service_item svg {
+    flex-shrink: 0;
+}
+
+.service_item p {
+    color: var(--parkway-black);
+    margin: 0;
+}
+
 @media only screen and (min-width: 0px) and (max-width: 767px) {
     .highlight {
         max-width: 100%;
         font-size: 1.5rem;
-    }
-
-    .about {
-        background-position: inherit;
     }
 }

@@ -50,6 +50,10 @@
     padding: 3rem 0rem 1rem;
 }
 
+.facilities {
+    padding: 1.5rem 0rem;
+}
+
 .facilities .details {
     max-width: 85%;
     margin: 1rem auto;
@@ -71,6 +75,10 @@
 .facility_card > h2 {
     color: var(--parkway-black);
     flex: 1;
+}
+
+.facility_card > h2 > span {
+    font-size: 0.75rem;
 }
 
 .facility_card .arrow {

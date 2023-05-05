@@ -53,6 +53,10 @@
     padding: 1rem 0rem;
 }
 
+.tagCard svg {
+    flex-shrink: 0;
+}
+
 .tagDetails {
     display: flex;
     flex-direction: column;

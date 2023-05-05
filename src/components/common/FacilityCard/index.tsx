@@ -6,6 +6,7 @@ const FacilityCard = (props: {
     text: string;
     inverted?: boolean;
     img: StaticImageData;
+    subheading?: string;
 }) => {
     return (
         <div
@@ -13,7 +14,17 @@ const FacilityCard = (props: {
                 !!props.inverted ? styles.inverted_card : ''
             }`}
         >
-            <h2>{props.text}</h2>
+            <h2>
+                {props.text}
+                {!!props.subheading ? (
+                    <span>
+                        <br />
+                        {props.subheading}
+                    </span>
+                ) : (
+                    ''
+                )}
+            </h2>
             <div
                 className={`${styles.arrow} ${
                     !!props.inverted ? styles.inverted_arrow : ''

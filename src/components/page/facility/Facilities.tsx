@@ -15,7 +15,7 @@ const Facilities = () => {
         <section className={styles.facilities}>
             <Container>
                 <p className={styles.breadcrumb}>
-                    <span>Home</span> ~~ Contact Us
+                    <span>Home</span> ~~ Facility
                 </p>
 
                 <div className={styles.details}>
@@ -62,7 +62,11 @@ const Facilities = () => {
 
                     <Row className='my-3'>
                         <Col xxl={6}>
-                            <FacilityCard img={Img7} text='Entertainment' />
+                            <FacilityCard
+                                img={Img7}
+                                text='Entertainment'
+                                subheading='(Movies/Popcorn/Puzzles/Visiting Library)'
+                            />
                         </Col>
                         <Col xxl={6}>
                             <FacilityCard
