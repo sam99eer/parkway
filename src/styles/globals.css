@@ -92,6 +92,15 @@ a {
     margin: 3rem 0rem;
 }
 
+.swiper-preview .swiper-slide {
+    scale: 0.75;
+    transition: scale 0.3s ease-in-out;
+}
+
+.swiper-preview .swiper-slide-thumb-active {
+    scale: 1;
+}
+
 .error {
     color: var(--parkway-dark-saffron);
     font-size: 0.8rem;

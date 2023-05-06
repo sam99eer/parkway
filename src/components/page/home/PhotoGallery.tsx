@@ -2,11 +2,11 @@ import { GalleryImages } from '@/constants/Data';
 import styles from '@/styles/Home.module.css';
 import Image from 'next/image';
 import { useState } from 'react';
-import { FreeMode, Navigation, Thumbs } from 'swiper';
+import { Navigation, Thumbs } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 const PhotoGallery = () => {
-    const [thumbsSwiper, setThumbsSwiper] = useState(null);
+    const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);
 
     return (
         <section className={styles.gallery}>
@@ -21,7 +21,12 @@ const PhotoGallery = () => {
                 className='gallery-slider'
                 navigation
                 modules={[Navigation, Thumbs]}
-                thumbs={{ swiper: thumbsSwiper }}
+                thumbs={{
+                    swiper:
+                        thumbsSwiper && !thumbsSwiper.destroyed
+                            ? thumbsSwiper
+                            : null,
+                }}
             >
                 {GalleryImages.map((item, index) => (
                     <SwiperSlide key={`gallery_img_${index}`}>
@@ -39,9 +44,9 @@ const PhotoGallery = () => {
                 slidesPerView={4}
                 freeMode={true}
                 watchSlidesProgress={true}
-                modules={[FreeMode, Navigation, Thumbs]}
+                modules={[Thumbs]}
                 className='swiper-preview'
-                onSwiper={() => {}}
+                onSwiper={setThumbsSwiper}
             >
                 {GalleryImages.map((item, index) => (
                     <SwiperSlide key={`preview_img_${index}`}>
