@@ -1,18 +1,13 @@
-import {
-    IContactErrorInterface,
-    IContactInterface,
-} from '@/models/ContactModel';
+import { IContactErrorInterface } from '@/models/ContactModel';
 import { ILoadingModel } from '@/models/LoadingModel';
 import styles from '@/styles/Home.module.css';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { Col, Container, Row, Spinner } from 'react-bootstrap';
 
 const Reach = (props: { contactRef: React.RefObject<HTMLDivElement> }) => {
-    const [data, setData] = useState<IContactInterface>({
-        email: '',
-        fullname: '',
-        message: '',
-    });
+    const fullNameRef = useRef<HTMLInputElement>(null);
+    const emailRef = useRef<HTMLInputElement>(null);
+    const messageRef = useRef<HTMLTextAreaElement>(null);
 
     const [flag, setFlag] = useState<ILoadingModel>({
         loading: false,
@@ -25,16 +20,6 @@ const Reach = (props: { contactRef: React.RefObject<HTMLDivElement> }) => {
         message: false,
     });
 
-    const changeHandler = (
-        uid: keyof IContactInterface,
-        event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-    ) => {
-        setData((oldState) => ({
-            ...oldState,
-            [uid]: event.target.value,
-        }));
-    };
-
     const submitHandler = (event: React.FormEvent) => {
         event.preventDefault();
 
@@ -45,9 +30,9 @@ const Reach = (props: { contactRef: React.RefObject<HTMLDivElement> }) => {
         });
 
         if (
-            data.email.trim().length < 5 ||
-            !data.email.includes('@') ||
-            data.email.length > 100
+            emailRef.current!.value.trim().length < 5 ||
+            !emailRef.current!.value.includes('@') ||
+            emailRef.current!.value.length > 100
         ) {
             setError((oldState) => ({
                 ...oldState,
@@ -57,9 +42,9 @@ const Reach = (props: { contactRef: React.RefObject<HTMLDivElement> }) => {
         }
 
         if (
-            data.fullname.trim() === '' ||
-            data.fullname.trim().length < 3 ||
-            data.fullname.length > 100
+            fullNameRef.current!.value.trim() === '' ||
+            fullNameRef.current!.value.trim().length < 3 ||
+            fullNameRef.current!.value.length > 100
         ) {
             setError((oldState) => ({
                 ...oldState,
@@ -69,9 +54,9 @@ const Reach = (props: { contactRef: React.RefObject<HTMLDivElement> }) => {
         }
 
         if (
-            data.message.trim() === '' ||
-            data.message.trim().length < 11 ||
-            data.message.length > 250
+            messageRef.current!.value.trim() === '' ||
+            messageRef.current!.value.trim().length < 11 ||
+            messageRef.current!.value.length > 250
         ) {
             setError((oldState) => ({
                 ...oldState,
@@ -95,11 +80,10 @@ const Reach = (props: { contactRef: React.RefObject<HTMLDivElement> }) => {
                         <Col md={6}>
                             <input
                                 type='text'
-                                value={data.fullname}
                                 placeholder='Fullname'
-                                onChange={changeHandler.bind(this, 'fullname')}
                                 className='w-100 p-2'
                                 maxLength={30}
+                                ref={fullNameRef}
                             />
                             <p className='error'>
                                 {!!error.fullname
@@ -110,11 +94,10 @@ const Reach = (props: { contactRef: React.RefObject<HTMLDivElement> }) => {
                         <Col md={6}>
                             <input
                                 type='email'
-                                value={data.email}
                                 placeholder='Email'
-                                onChange={changeHandler.bind(this, 'email')}
                                 className='w-100 p-2'
                                 maxLength={50}
+                                ref={emailRef}
                             />
                             <p className='error'>
                                 {!!error.email
@@ -126,11 +109,10 @@ const Reach = (props: { contactRef: React.RefObject<HTMLDivElement> }) => {
                     <Row className='py-3'>
                         <Col>
                             <textarea
-                                value={data.message}
                                 placeholder='Type your message here...'
-                                onChange={changeHandler.bind(this, 'message')}
                                 className='w-100 p-2'
                                 maxLength={250}
+                                ref={messageRef}
                             />
                             <p className='error'>
                                 {!!error.message

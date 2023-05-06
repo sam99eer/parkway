@@ -1,19 +1,14 @@
-import {
-    IContactErrorInterface,
-    IContactInterface,
-} from '@/models/ContactModel';
+import { IContactErrorInterface } from '@/models/ContactModel';
 import { ILoadingModel } from '@/models/LoadingModel';
 import styles from '@/styles/Contact.module.css';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { Spinner } from 'react-bootstrap';
 import Col from 'react-bootstrap/Col';
 
 const ContactForm = () => {
-    const [data, setData] = useState<IContactInterface>({
-        email: '',
-        fullname: '',
-        message: '',
-    });
+    const fullNameRef = useRef<HTMLInputElement>(null);
+    const emailRef = useRef<HTMLInputElement>(null);
+    const messageRef = useRef<HTMLTextAreaElement>(null);
 
     const [error, setError] = useState<IContactErrorInterface>({
         email: false,
@@ -26,16 +21,6 @@ const ContactForm = () => {
         success: false,
     });
 
-    const changeHandler = (
-        uid: keyof IContactInterface,
-        event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-    ) => {
-        setData((oldState) => ({
-            ...oldState,
-            [uid]: event.target.value,
-        }));
-    };
-
     const submitHandler = (event: React.FormEvent) => {
         event.preventDefault();
 
@@ -46,9 +31,9 @@ const ContactForm = () => {
         });
 
         if (
-            data.email.trim().length < 5 ||
-            !data.email.includes('@') ||
-            data.email.length > 100
+            emailRef.current!.value.trim().length < 5 ||
+            !emailRef.current!.value.includes('@') ||
+            emailRef.current!.value.length > 100
         ) {
             setError((oldState) => ({
                 ...oldState,
@@ -58,9 +43,9 @@ const ContactForm = () => {
         }
 
         if (
-            data.fullname.trim() === '' ||
-            data.fullname.trim().length < 3 ||
-            data.fullname.length > 100
+            fullNameRef.current!.value.trim() === '' ||
+            fullNameRef.current!.value.trim().length < 3 ||
+            fullNameRef.current!.value.length > 100
         ) {
             setError((oldState) => ({
                 ...oldState,
@@ -70,9 +55,9 @@ const ContactForm = () => {
         }
 
         if (
-            data.message.trim() === '' ||
-            data.message.trim().length < 11 ||
-            data.message.length > 250
+            messageRef.current!.value.trim() === '' ||
+            messageRef.current!.value.trim().length < 11 ||
+            messageRef.current!.value.length > 250
         ) {
             setError((oldState) => ({
                 ...oldState,
@@ -93,10 +78,9 @@ const ContactForm = () => {
                 <h1>Send Message</h1>
                 <input
                     type='text'
-                    onChange={changeHandler.bind(this, 'fullname')}
                     placeholder='Full Name'
                     maxLength={30}
-                    value={data.fullname}
+                    ref={fullNameRef}
                     required
                 />
                 <p className='error'>
@@ -104,10 +88,9 @@ const ContactForm = () => {
                 </p>
                 <input
                     type='email'
-                    onChange={changeHandler.bind(this, 'email')}
                     placeholder='Email'
                     maxLength={50}
-                    value={data.email}
+                    ref={emailRef}
                     required
                 />
                 <p className='error'>
@@ -115,10 +98,9 @@ const ContactForm = () => {
                 </p>
 
                 <textarea
-                    onChange={changeHandler.bind(this, 'message')}
                     placeholder='Type your message...'
                     maxLength={300}
-                    value={data.message}
+                    ref={messageRef}
                     required
                 />
                 <p className='error'>
@@ -126,7 +108,9 @@ const ContactForm = () => {
                         ? 'Please enter atleast 10 characters'
                         : ''}
                 </p>
-                <button>{flag.loading ? <Spinner /> : 'Send'}</button>
+                <button disabled={flag.loading}>
+                    {flag.loading ? <Spinner /> : 'Send'}
+                </button>
             </form>
         </Col>
     );
