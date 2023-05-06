@@ -5,7 +5,7 @@ const GMap = () => {
             width='100%'
             height='600'
             allowFullScreen
-            loading='eager'
+            loading='lazy'
             referrerPolicy='no-referrer-when-downgrade'
         />
     );
