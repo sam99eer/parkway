@@ -1,5 +1,7 @@
+import Popup from '@/components/common/Popup';
 import { IContactErrorInterface } from '@/models/ContactModel';
 import { ILoadingModel } from '@/models/LoadingModel';
+import { IPopupModel } from '@/models/PopupModel';
 import styles from '@/styles/Contact.module.css';
 import { useRef, useState } from 'react';
 import { Spinner } from 'react-bootstrap';
@@ -20,6 +22,18 @@ const ContactForm = () => {
         loading: false,
         success: false,
     });
+
+    const [popup, setPopup] = useState<IPopupModel>({
+        isVisible: false,
+        message: '',
+    });
+
+    const modalHandler = (visibleStatus: boolean, msg: string) => {
+        setPopup({
+            isVisible: visibleStatus,
+            message: msg,
+        });
+    };
 
     const submitHandler = (event: React.FormEvent) => {
         event.preventDefault();
@@ -68,51 +82,59 @@ const ContactForm = () => {
     };
 
     return (
-        <Col lg={6}>
-            <form
-                className={styles.send_form}
-                data-aos='fade-left'
-                data-aos-delay='200'
-                onSubmit={submitHandler}
-            >
-                <h1>Send Message</h1>
-                <input
-                    type='text'
-                    placeholder='Full Name'
-                    maxLength={30}
-                    ref={fullNameRef}
-                    required
+        <>
+            {popup.isVisible ? (
+                <Popup
+                    text={popup.message}
+                    onClose={modalHandler.bind(this, false, '')}
                 />
-                <p className='error'>
-                    {!!error.fullname ? 'Please enter valid name' : ''}
-                </p>
-                <input
-                    type='email'
-                    placeholder='Email'
-                    maxLength={50}
-                    ref={emailRef}
-                    required
-                />
-                <p className='error'>
-                    {!!error.email ? 'Please enter valid email' : ''}
-                </p>
+            ) : null}
+            <Col lg={6}>
+                <form
+                    className={styles.send_form}
+                    data-aos='fade-left'
+                    data-aos-delay='200'
+                    onSubmit={submitHandler}
+                >
+                    <h1>Send Message</h1>
+                    <input
+                        type='text'
+                        placeholder='Full Name'
+                        maxLength={30}
+                        ref={fullNameRef}
+                        required
+                    />
+                    <p className='error'>
+                        {!!error.fullname ? 'Please enter valid name' : ''}
+                    </p>
+                    <input
+                        type='email'
+                        placeholder='Email'
+                        maxLength={50}
+                        ref={emailRef}
+                        required
+                    />
+                    <p className='error'>
+                        {!!error.email ? 'Please enter valid email' : ''}
+                    </p>
 
-                <textarea
-                    placeholder='Type your message...'
-                    maxLength={300}
-                    ref={messageRef}
-                    required
-                />
-                <p className='error'>
-                    {!!error.message
-                        ? 'Please enter atleast 10 characters'
-                        : ''}
-                </p>
-                <button disabled={flag.loading}>
-                    {flag.loading ? <Spinner /> : 'Send'}
-                </button>
-            </form>
-        </Col>
+                    <textarea
+                        placeholder='Type your message...'
+                        maxLength={300}
+                        ref={messageRef}
+                        required
+                    />
+                    <p className='error'>
+                        {!!error.message
+                            ? 'Please enter atleast 10 characters'
+                            : ''}
+                    </p>
+                    <button disabled={flag.loading}>
+                        {flag.loading ? <Spinner /> : 'Send'}
+                    </button>
+                </form>
+            </Col>
+        </>
     );
 };
 
