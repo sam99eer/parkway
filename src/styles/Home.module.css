@@ -242,6 +242,10 @@
     opacity: 0.7;
 }
 
+.msg_sent {
+    background-color: var(--parkway-success) !important;
+}
+
 @media only screen and (min-width: 0px) and (max-width: 767px) {
     .mission_details {
         padding: 1rem 2rem;

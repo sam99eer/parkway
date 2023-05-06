@@ -37,6 +37,8 @@ const Reach = (props: { contactRef: React.RefObject<HTMLDivElement> }) => {
     const submitHandler = (event: React.FormEvent) => {
         event.preventDefault();
 
+        if (flag.success) return;
+
         setError({
             email: false,
             fullname: false,
@@ -69,7 +71,7 @@ const Reach = (props: { contactRef: React.RefObject<HTMLDivElement> }) => {
 
         if (
             messageRef.current!.value.trim() === '' ||
-            messageRef.current!.value.trim().length < 11 ||
+            messageRef.current!.value.trim().length < 10 ||
             messageRef.current!.value.length > 250
         ) {
             setError((oldState) => ({
@@ -78,6 +80,61 @@ const Reach = (props: { contactRef: React.RefObject<HTMLDivElement> }) => {
             }));
             return;
         }
+
+        setFlag((oldState) => ({
+            ...oldState,
+            loading: true,
+        }));
+
+        fetch('api/contact', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                fullname: fullNameRef.current!.value,
+                email: emailRef.current!.value,
+                message: messageRef.current!.value,
+            }),
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                if (
+                    data?.message ===
+                    'Your message has been sent successfully! You will be contacted within 24 hours.'
+                ) {
+                    setPopup({
+                        isVisible: true,
+                        message: data?.message,
+                    });
+                    setFlag({
+                        loading: false,
+                        success: true,
+                    });
+                    fullNameRef.current!.value = '';
+                    emailRef.current!.value = '';
+                    messageRef.current!.value = '';
+                    return;
+                }
+                setPopup({
+                    isVisible: true,
+                    message: data?.message,
+                });
+                setFlag((oldState) => ({
+                    ...oldState,
+                    loading: false,
+                }));
+            })
+            .catch(() => {
+                setPopup({
+                    isVisible: true,
+                    message: 'Some Error Occured! Please try again later.',
+                });
+                setFlag((oldState) => ({
+                    ...oldState,
+                    loading: false,
+                }));
+            });
     };
 
     return (
@@ -145,11 +202,19 @@ const Reach = (props: { contactRef: React.RefObject<HTMLDivElement> }) => {
                         <Row className='pt-2'>
                             <Col>
                                 <button
-                                    className='w-100 d-flex justify-content-center align-items-center'
+                                    className={`w-100 d-flex justify-content-center align-items-center ${
+                                        flag.success ? styles.msg_sent : ''
+                                    }`}
                                     type='submit'
                                     disabled={flag.loading}
                                 >
-                                    {flag.loading ? <Spinner /> : 'Send'}
+                                    {flag.success ? (
+                                        'Sent'
+                                    ) : flag.loading ? (
+                                        <Spinner />
+                                    ) : (
+                                        'Send'
+                                    )}
                                 </button>
                             </Col>
                         </Row>

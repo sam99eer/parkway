@@ -116,6 +116,10 @@
     cursor: pointer;
 }
 
+.msg_sent {
+    background-color: var(--parkway-success) !important;
+}
+
 .address_info {
     display: flex;
     gap: 2rem;
