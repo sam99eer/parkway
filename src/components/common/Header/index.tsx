@@ -126,7 +126,11 @@ const Header = (props: { activeLink: LINKS }) => {
                     <Nav
                         className={`${styles.icons} flex-row justify-content-center justify-content-lg-end`}
                     >
-                        <Link href={LINKS.HOME}>
+                        <Link
+                            href='https://www.facebook.com/Parkwayadulthomecare/'
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             <Fb />
                         </Link>
 

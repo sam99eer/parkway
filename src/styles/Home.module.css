@@ -1,6 +1,4 @@
 .home {
-    min-height: 100vh;
-    min-height: 100svh;
     background-image: url('../assets/images/banner_home.jpg');
     background-size: cover;
     background-repeat: no-repeat;
