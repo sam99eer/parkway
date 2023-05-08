@@ -1,5 +1,7 @@
 import ServiceItem from '@/components/common/ServiceItem';
+import { LINKS } from '@/constants/Links';
 import styles from '@/styles/Services.module.css';
+import Link from 'next/link';
 import { Col, Container, Row } from 'react-bootstrap';
 
 const ServiceHighlights = () => {
@@ -36,13 +38,14 @@ const ServiceHighlights = () => {
                         >
                             <ServiceItem text='Professionally trained staff available 24 hours a day' />
                         </Col>
+
                         <Col
                             className='my-4'
                             md={6}
-                            data-aos='fade-left'
+                            data-aos='fade-right'
                             data-aos-delay='100'
                         >
-                            <ServiceItem text='Activity/Exercise coordinator on staff' />
+                            <ServiceItem text='Medication assistance and monitoring; coordination with doctors and pharmacy' />
                         </Col>
                     </Row>
                     <Row>
@@ -67,10 +70,10 @@ const ServiceHighlights = () => {
                         <Col
                             className='my-4'
                             md={6}
-                            data-aos='fade-right'
+                            data-aos='fade-left'
                             data-aos-delay='100'
                         >
-                            <ServiceItem text='Medication assistance and monitoring; coordination with doctors and pharmacy' />
+                            <ServiceItem text="Alzheimer's/Dementia certified" />
                         </Col>
                         <Col
                             className='my-4'
@@ -78,7 +81,7 @@ const ServiceHighlights = () => {
                             data-aos='fade-left'
                             data-aos-delay='100'
                         >
-                            <ServiceItem text="Alzheimer's/Dementia certified" />
+                            <ServiceItem text='Activity/Exercise coordinator on staff' />
                         </Col>
                     </Row>
                 </div>
@@ -88,9 +91,11 @@ const ServiceHighlights = () => {
                     data-aos='fade-up'
                     data-aos-delay='200'
                 >
-                    <span>Reach Out</span> to us today if you have any questions
-                    or need additional information about our facility and the
-                    services we offer.
+                    <Link href={LINKS.CONTACT}>
+                        <span>Reach Out</span>
+                    </Link>{' '}
+                    to us today if you have any questions or need additional
+                    information about our facility and the services we offer.
                 </p>
             </Container>
         </section>

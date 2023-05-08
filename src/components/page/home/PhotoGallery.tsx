@@ -33,7 +33,7 @@ const PhotoGallery = () => {
                         <Image
                             src={item.img}
                             alt={item.alt}
-                            className='img-fluid'
+                            className={styles.swiper_image}
                         />
                     </SwiperSlide>
                 ))}

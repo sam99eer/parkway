@@ -7,7 +7,9 @@ import Img6 from '@/assets/images/facility_6.jpg';
 import Img7 from '@/assets/images/facility_7.jpg';
 import Img8 from '@/assets/images/facility_8.jpg';
 import FacilityCard from '@/components/common/FacilityCard';
+import { LINKS } from '@/constants/Links';
 import styles from '@/styles/Facility.module.css';
+import Link from 'next/link';
 import { Col, Container, Row } from 'react-bootstrap';
 
 const Facilities = () => {
@@ -19,7 +21,10 @@ const Facilities = () => {
                     data-aos='fade-right'
                     data-aos-delay='200'
                 >
-                    <span>Home</span> ~~ Facility
+                    <Link href={LINKS.HOME}>
+                        <span>Home</span>
+                    </Link>
+                    ~~ Facility
                 </p>
 
                 <div className={styles.details}>
@@ -87,9 +92,11 @@ const Facilities = () => {
                     data-aos='fade-up'
                     data-aos-delay='200'
                 >
-                    <span>Reach Out</span> to us today if you have any questions
-                    or need additional information about our facility and the
-                    services we offer.
+                    <Link href={LINKS.CONTACT}>
+                        <span>Reach Out</span>
+                    </Link>{' '}
+                    to us today if you have any questions or need additional
+                    information about our facility and the services we offer.
                 </p>
             </Container>
         </section>

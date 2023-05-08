@@ -212,8 +212,8 @@
 }
 
 .reach {
-    padding: 3.5rem 0rem;
     background-color: var(--parkway-light-grey);
+    padding: 3.5rem 0rem;
 }
 
 .reach > div :is(h1, h2, p) {
@@ -244,12 +244,29 @@
     background-color: var(--parkway-success) !important;
 }
 
+.swiper_image {
+    max-height: 300px;
+    max-width: 100%;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+}
+
 @media only screen and (min-width: 0px) and (max-width: 767px) {
     .mission_details {
         padding: 1rem 2rem;
     }
 
+    .swiper_image {
+        max-height: 150px;
+    }
+
     .slide_image:hover {
         border-color: transparent;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .swiper_image {
+        max-height: 450px;
     }
 }

@@ -1,4 +1,6 @@
+import { LINKS } from '@/constants/Links';
 import styles from '@/styles/Services.module.css';
+import Link from 'next/link';
 import { Container } from 'react-bootstrap';
 
 const ServiceDetails = () => {
@@ -10,7 +12,10 @@ const ServiceDetails = () => {
                     data-aos='fade-right'
                     data-aos-delay='200'
                 >
-                    <span>Home</span> ~~ Our Services
+                    <Link href={LINKS.HOME}>
+                        <span>Home</span>
+                    </Link>{' '}
+                    ~~ Our Services
                 </p>
                 <p
                     className={styles.highlight}

@@ -5,6 +5,7 @@
 
 .footer :is(h2, p) {
     color: var(--parkway-light-white);
+    text-align: justify;
 }
 
 .footer a {

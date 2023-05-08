@@ -145,8 +145,13 @@ const Reach = (props: { contactRef: React.RefObject<HTMLDivElement> }) => {
                     onClose={modalHandler.bind(this, false, '')}
                 />
             ) : null}
-            <section className={styles.reach} ref={props.contactRef}>
-                <Container data-aos='fade-up' data-aos-delay='100'>
+            <section
+                className={styles.reach}
+                ref={props.contactRef}
+                data-aos='fade-up'
+                data-aos-delay='100'
+            >
+                <Container>
                     <h2>Reach out to us</h2>
                     <h1>Send us a message</h1>
                     <p>

@@ -2,10 +2,19 @@ import Email from '@/assets/svg/Email';
 import MapPin from '@/assets/svg/MapPin';
 import Telephone from '@/assets/svg/Telephone';
 import ContactForm from '@/components/page/contact/ContactForm';
+import { LINKS } from '@/constants/Links';
 import styles from '@/styles/Contact.module.css';
+import Link from 'next/link';
+import { useRef } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 
 const ContactDetails = () => {
+    const contactSectionRef = useRef<HTMLDivElement>(null);
+
+    const scrollHandler = () => {
+        contactSectionRef.current?.scrollIntoView();
+    };
+
     return (
         <section className={styles.contactus}>
             <Container>
@@ -14,10 +23,13 @@ const ContactDetails = () => {
                     data-aos='fade-right'
                     data-aos-delay='200'
                 >
-                    <span>Home</span> ~~ Contact Us
+                    <Link href={LINKS.HOME}>
+                        <span>Home</span>
+                    </Link>{' '}
+                    ~~ Contact Us
                 </p>
 
-                <div className={styles.contact_details}>
+                <div className={styles.contact_details} ref={contactSectionRef}>
                     <p data-aos='zoom-in' data-aos-delay='200'>
                         Do you have any inquiries about our services? We are
                         always here for you. We’ll respond to you as soon as we
@@ -91,9 +103,11 @@ const ContactDetails = () => {
                     data-aos='fade-up'
                     data-aos-delay='200'
                 >
-                    <span>Reach Out</span> to us today if you have any questions
-                    or need additional information about our facility and the
-                    services we offer.
+                    <button onClick={scrollHandler}>
+                        <span>Reach Out</span>
+                    </button>{' '}
+                    to us today if you have any questions or need additional
+                    information about our facility and the services we offer.
                 </p>
             </Container>
         </section>

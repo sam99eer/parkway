@@ -28,6 +28,10 @@
     border-bottom: 1px solid var(--parkway-stroke);
 }
 
+.breadcrumb a {
+    text-decoration: none;
+}
+
 .breadcrumb span {
     color: var(--parkway-breadcrumb);
 }
@@ -73,6 +77,30 @@
     color: var(--parkway-light-saffron);
 }
 
+.reach a {
+    text-decoration: none;
+    position: relative;
+}
+
+.reach a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    border-radius: 5px;
+    height: 0.05em;
+    bottom: 0;
+    left: 0;
+    background: var(--parkway-light-saffron);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.reach a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
 .service_highlights > div > h1 {
     text-align: center;
     font-weight: 600;
@@ -97,6 +125,7 @@
 .service_item p {
     color: var(--parkway-black);
     margin: 0;
+    text-align: justify;
 }
 
 @media only screen and (min-width: 0px) and (max-width: 767px) {

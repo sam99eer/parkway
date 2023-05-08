@@ -1,6 +1,8 @@
 import img from '@/assets/images/mom_and_daughter.jpg';
+import { LINKS } from '@/constants/Links';
 import styles from '@/styles/About.module.css';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Col, Container, Row } from 'react-bootstrap';
 
 const WhoWeAre = () => {
@@ -12,7 +14,10 @@ const WhoWeAre = () => {
                     data-aos='fade-right'
                     data-aos-delay='200'
                 >
-                    <span>Home</span> ~~ About Us
+                    <Link href={LINKS.HOME}>
+                        <span>Home</span>
+                    </Link>{' '}
+                    ~~ About Us
                 </p>
                 <p
                     className={styles.highlight}

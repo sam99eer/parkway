@@ -1,4 +1,6 @@
+import { LINKS } from '@/constants/Links';
 import styles from '@/styles/About.module.css';
+import Link from 'next/link';
 import { Col, Container, Row } from 'react-bootstrap';
 
 const Vision = () => {
@@ -6,7 +8,7 @@ const Vision = () => {
         <section className={styles.vision}>
             <Container>
                 <Row className={styles.data}>
-                    <Col md={6} lg={8} className='overflow-hidden'>
+                    <Col md={6} lg={8} className='d-flex overflow-hidden'>
                         <div data-aos='fade-right' data-aos-delay='200'>
                             <h1>Our Staff</h1>
                             <p>
@@ -14,10 +16,6 @@ const Vision = () => {
                                 RN-BSN with 9+ years of caregiver experience”.
                                 All of our staff will have the necessary
                                 knowledge & training to care for our residents.
-                                We offer individualized assistance in our home
-                                on a more personal level. This allows for a more
-                                personal touch and awareness to your loved ones
-                                changing needs.
                             </p>
                         </div>
                     </Col>
@@ -37,9 +35,11 @@ const Vision = () => {
                     data-aos='fade-up'
                     data-aos-delay='200'
                 >
-                    <span>Reach Out</span> to us today if you have any questions
-                    or need additional information about our facility and the
-                    services we offer.
+                    <Link href={LINKS.CONTACT}>
+                        <span>Reach Out</span>
+                    </Link>{' '}
+                    to us today if you have any questions or need additional
+                    information about our facility and the services we offer.
                 </p>
             </Container>
         </section>

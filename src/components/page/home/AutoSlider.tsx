@@ -18,7 +18,7 @@ const AutoSlider = () => {
                     clickable: true,
                 }}
                 autoplay={{
-                    delay: 1500,
+                    delay: 3000,
                     disableOnInteraction: false,
                 }}
                 modules={[Autoplay, Pagination]}
