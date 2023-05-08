@@ -109,7 +109,9 @@ a {
 }
 
 .flip-swiper img {
-    max-height: 350px;
+    height: 300px;
+    width: 300px;
+    border-radius: 100%;
 }
 
 .flip-swiper .swiper-slide {
@@ -120,6 +122,10 @@ a {
 @media only screen and (min-width: 0px) and (max-width: 767px) {
     .gallery-slider {
         min-height: 184px;
+    }
+
+    .flip-swiper .swiper-slide {
+        justify-content: center;
     }
 }
 

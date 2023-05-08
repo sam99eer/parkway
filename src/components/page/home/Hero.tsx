@@ -48,7 +48,6 @@ const Hero = (props: { onScroll: () => void }) => {
                         <Swiper
                             effect={'flip'}
                             modules={[EffectFlip, Autoplay]}
-                            loop
                             className='flip-swiper'
                             flipEffect={{
                                 slideShadows: false,
@@ -63,34 +62,27 @@ const Hero = (props: { onScroll: () => void }) => {
                                     src={SmilingMan}
                                     alt='Old Man Smiling'
                                     className='img-fluid'
-                                    width={400}
                                 />
                             </SwiperSlide>
                             <SwiperSlide>
                                 <Image
                                     src={MomDaughter}
                                     alt='Mom and Daughter'
-                                    className='rounded-circle'
-                                    width={350}
-                                    height={400}
+                                    className='img-fluid'
                                 />
                             </SwiperSlide>
                             <SwiperSlide>
                                 <Image
                                     src={Slide3}
                                     alt='Slide3'
-                                    className='rounded-circle'
-                                    width={350}
-                                    height={400}
+                                    className='img-fluid'
                                 />
                             </SwiperSlide>
                             <SwiperSlide>
                                 <Image
                                     src={Slide4}
                                     alt='Slide4'
-                                    className='rounded-circle'
-                                    width={350}
-                                    height={400}
+                                    className='img-fluid'
                                 />
                             </SwiperSlide>
                         </Swiper>
