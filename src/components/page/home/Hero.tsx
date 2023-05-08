@@ -1,3 +1,6 @@
+import Slide3 from '@/assets/images/home1.jpg';
+import Slide4 from '@/assets/images/home2.jpg';
+import MomDaughter from '@/assets/images/mom_and_daughter.jpg';
 import SmilingMan from '@/assets/images/smiling_man.png';
 import styles from '@/styles/Home.module.css';
 import Image from 'next/image';
@@ -61,26 +64,33 @@ const Hero = (props: { onScroll: () => void }) => {
                                     alt='Old Man Smiling'
                                     className='img-fluid'
                                     width={400}
-                                    data-aos='flip-right'
-                                    data-aos-delay='450'
                                 />
                             </SwiperSlide>
                             <SwiperSlide>
-                                <img
-                                    src='https://fastly.picsum.photos/id/335/400/350.jpg?hmac=DBECucZD-k_ssT9QMp5TrGxoNryrdRwJ4-TyeltVcwY'
-                                    className='img-fluid rounded-circle'
+                                <Image
+                                    src={MomDaughter}
+                                    alt='Mom and Daughter'
+                                    className='rounded-circle'
+                                    width={350}
+                                    height={400}
                                 />
                             </SwiperSlide>
                             <SwiperSlide>
-                                <img
-                                    src='https://fastly.picsum.photos/id/609/400/350.jpg?hmac=8zcnQ6_dyEjDk8B-LU2dJzXImOxhM9CVqP0AwIHu8hg'
-                                    className='img-fluid rounded-circle'
+                                <Image
+                                    src={Slide3}
+                                    alt='Slide3'
+                                    className='rounded-circle'
+                                    width={350}
+                                    height={400}
                                 />
                             </SwiperSlide>
                             <SwiperSlide>
-                                <img
-                                    src='https://fastly.picsum.photos/id/423/400/350.jpg?hmac=_Uw8SITI_X6jZnl0awQTU3ao4xYeDrq7L-UbrmWpFqw'
-                                    className='img-fluid rounded-circle'
+                                <Image
+                                    src={Slide4}
+                                    alt='Slide4'
+                                    className='rounded-circle'
+                                    width={350}
+                                    height={400}
                                 />
                             </SwiperSlide>
                         </Swiper>
