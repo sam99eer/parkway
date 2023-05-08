@@ -44,13 +44,13 @@ a {
 
 @font-face {
     font-family: var(--font-papyrus);
-    src: url('../assets/fonts/PAPYRUS.ttf') format('truetype');
+    src: url('/public/fonts/PAPYRUS.ttf') format('truetype');
     font-display: swap;
 }
 
 @font-face {
     font-family: var(--font-agency);
-    src: url('../assets/fonts/AgencyFB.woff') format('woff');
+    src: url('/public/fonts/AgencyFB.woff') format('woff');
     font-display: swap;
 }
 
