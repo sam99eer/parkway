@@ -1,11 +1,8 @@
-import Slide3 from '@/assets/images/home1.jpg';
-import Slide4 from '@/assets/images/home2.jpg';
-import MomDaughter from '@/assets/images/mom_and_daughter.jpg';
-import SmilingMan from '@/assets/images/smiling_man.png';
+import { BannerImages } from '@/constants/Data';
 import styles from '@/styles/Home.module.css';
 import Image from 'next/image';
 import { Col, Container, Row } from 'react-bootstrap';
-import { Autoplay, EffectFlip } from 'swiper';
+import { Autoplay, EffectFade } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Typewriter from 'typewriter-effect';
 
@@ -30,6 +27,7 @@ const Hero = (props: { onScroll: () => void }) => {
                                         )
                                         .start();
                                 }}
+                                options={{ loop: true }}
                             />
                         </h1>
                         <p>
@@ -46,45 +44,23 @@ const Hero = (props: { onScroll: () => void }) => {
                     </Col>
                     <Col md={6} className='py-2 py-md-0'>
                         <Swiper
-                            effect={'flip'}
-                            modules={[EffectFlip, Autoplay]}
+                            effect={'fade'}
+                            modules={[EffectFade, Autoplay]}
                             className='flip-swiper'
-                            flipEffect={{
-                                slideShadows: false,
-                            }}
                             autoplay={{
                                 delay: 2500,
                                 disableOnInteraction: false,
                             }}
                         >
-                            <SwiperSlide>
-                                <Image
-                                    src={SmilingMan}
-                                    alt='Old Man Smiling'
-                                    className='img-fluid'
-                                />
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <Image
-                                    src={MomDaughter}
-                                    alt='Mom and Daughter'
-                                    className='img-fluid'
-                                />
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <Image
-                                    src={Slide3}
-                                    alt='Slide3'
-                                    className='img-fluid'
-                                />
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <Image
-                                    src={Slide4}
-                                    alt='Slide4'
-                                    className='img-fluid'
-                                />
-                            </SwiperSlide>
+                            {BannerImages.map((item, index) => (
+                                <SwiperSlide key={`header_img_${index}`}>
+                                    <Image
+                                        src={item.img}
+                                        alt={item.alt}
+                                        className='img-fluid'
+                                    />
+                                </SwiperSlide>
+                            ))}
                         </Swiper>
                     </Col>
                 </Row>

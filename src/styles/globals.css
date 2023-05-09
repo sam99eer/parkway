@@ -21,6 +21,7 @@
     --parkway-view-more: #1284a1;
     --parkway-banner-bg: rgba(72, 176, 238, 0.5);
     --parkway-backdrop: rgba(0, 0, 0, 0.75);
+    --parkway-footer: #818485;
     --parkway-stroke: #707070;
     --font-papyrus: 'Papyrus';
     --font-agency: 'Agency FB';
@@ -109,8 +110,8 @@ a {
 }
 
 .flip-swiper img {
-    height: 300px;
-    width: 300px;
+    height: 600px;
+    width: 600px;
     border-radius: 100%;
 }
 
@@ -126,6 +127,18 @@ a {
 
     .flip-swiper .swiper-slide {
         justify-content: center;
+    }
+
+    .flip-swiper img {
+        height: 250px;
+        width: 250px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+    .flip-swiper img {
+        height: 350px;
+        width: 350px;
     }
 }
 

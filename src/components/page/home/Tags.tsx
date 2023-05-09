@@ -10,25 +10,26 @@ const Tags = () => {
         <section className={styles.tags}>
             <Container data-aos='fade-up' data-aos-delay='100'>
                 <Row>
-                    <Col md={4}>
+                    <Col lg={4}>
                         <TagCard
                             icon={<Stethoscope />}
-                            text='Lorem ipsum dolor sit'
+                            text='Home docotor and therapists'
                             onClick={() => {}}
                         />
                     </Col>
-                    <Col md={4}>
+                    <Col lg={4}>
                         <TagCard
                             icon={<Nurse />}
-                            text='Lorem ipsum dolor sit'
+                            text='Profesional trained staff available'
                             onClick={() => {}}
                         />
                     </Col>
-                    <Col md={4}>
+                    <Col lg={4}>
                         <TagCard
                             icon={<Chair />}
-                            text='Lorem ipsum dolor sit'
+                            text='Alzherimer/Dementia certified'
                             onClick={() => {}}
+                            endCard
                         />
                     </Col>
                 </Row>

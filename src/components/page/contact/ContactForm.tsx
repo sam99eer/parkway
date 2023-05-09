@@ -146,7 +146,7 @@ const ContactForm = () => {
                     onClose={modalHandler.bind(this, false, '')}
                 />
             ) : null}
-            <Col lg={6}>
+            <Col lg={6} className='mt-5 mt-lg-0'>
                 <form
                     className={styles.send_form}
                     data-aos='fade-left'

@@ -1,6 +1,6 @@
 .about {
-    min-height: 60vh;
-    min-height: 60svh;
+    min-height: 95vh;
+    min-height: 95svh;
     background-image: url('../assets/images/about_banner.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -134,5 +134,7 @@
 
     .about {
         background-position: inherit;
+        min-height: 60vh;
+        min-height: 60svh;
     }
 }

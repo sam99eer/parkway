@@ -1,11 +1,15 @@
+import FbLight from '@/assets/svg/FbLight';
+import MailLight from '@/assets/svg/MailLight';
+import MobileLight from '@/assets/svg/MobileLight';
 import styles from '@/styles/Footer.module.css';
+import Link from 'next/link';
 import { Col, Container, Row } from 'react-bootstrap';
 
 const Footer = () => {
     return (
         <footer className={styles.footer}>
-            <Container fluid className='px-3 px-md-5'>
-                <Row>
+            <Container>
+                <Row className='pb-3'>
                     <Col md={4} className='py-3 py-md-0'>
                         <h2>About Us</h2>
                         <p className='w-75'>
@@ -31,8 +35,8 @@ const Footer = () => {
                         </a>
                     </Col>
                     <Col md={4} className='py-3 py-md-0'>
-                        <h2>Contact Us</h2>
-                        <p>
+                        <h2 className='text-start text-md-end'>Contact Us</h2>
+                        <p className='text-start text-md-end'>
                             <a href='tel:509-237-7297'>509-237-7297</a>
                             <br />
                             Fax no. 509-214-7696
@@ -43,6 +47,21 @@ const Footer = () => {
                         </p>
                     </Col>
                 </Row>
+                <div className={styles.icon}>
+                    <Link
+                        href='https://www.facebook.com/Parkwayadulthomecare/'
+                        target='_blank'
+                        rel='noopener noreferrer'
+                    >
+                        <FbLight />
+                    </Link>
+                    <Link href='tel:509-237-7297'>
+                        <MobileLight />
+                    </Link>
+                    <Link href='mailto:parkwayadulthomecare@yahoo.com'>
+                        <MailLight />
+                    </Link>
+                </div>
             </Container>
         </footer>
     );

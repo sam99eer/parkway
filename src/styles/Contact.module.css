@@ -1,6 +1,6 @@
 .contact {
-    min-height: 60vh;
-    min-height: 60svh;
+    min-height: 95vh;
+    min-height: 95svh;
     background-image: url('../assets/images/banner_contact.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -95,11 +95,11 @@
 .icon {
     background-color: var(--parkway-white);
     display: flex;
-    height: 94px;
-    width: 94px;
+    height: 60px;
+    width: 60px;
     max-width: 100%;
     max-height: 100%;
-    border-radius: 47px;
+    border-radius: 30px;
     border: 1px solid var(--parkway-black);
     justify-content: center;
     align-items: center;
@@ -186,5 +186,14 @@
 @media only screen and (min-width: 0px) and (max-width: 767px) {
     .contactus .contact_details {
         max-width: 100%;
+    }
+
+    .contact {
+        min-height: 60vh;
+        min-height: 60svh;
+    }
+
+    .address_info {
+        gap: 1rem;
     }
 }

@@ -1,6 +1,6 @@
 .services {
-    min-height: 60vh;
-    min-height: 60svh;
+    min-height: 95vh;
+    min-height: 95svh;
     background-image: url('../assets/images/banner_services.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -132,5 +132,10 @@
     .highlight {
         max-width: 100%;
         font-size: 1.5rem;
+    }
+
+    .services {
+        min-height: 60vh;
+        min-height: 60svh;
     }
 }

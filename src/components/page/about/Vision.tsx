@@ -16,6 +16,8 @@ const Vision = () => {
                                 RN-BSN with 9+ years of caregiver experience”.
                                 All of our staff will have the necessary
                                 knowledge & training to care for our residents.
+                                We offer individualized assistance in our home
+                                on a more personal level.
                             </p>
                         </div>
                     </Col>

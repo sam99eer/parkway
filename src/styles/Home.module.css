@@ -16,6 +16,10 @@
     margin: 0;
 }
 
+.details > h1 {
+    min-height: 96px;
+}
+
 .details > p {
     padding: 22px 0px 42px;
 }
@@ -50,6 +54,10 @@
     align-items: center;
     gap: 1.5rem;
     padding: 1rem 0rem;
+}
+
+.endCard {
+    justify-content: flex-end;
 }
 
 .tagCard svg {
@@ -251,6 +259,18 @@
     object-fit: cover;
 }
 
+@media only screen and (min-width: 0px) and (max-width: 322px) {
+    .details > h1 {
+        min-height: 97px;
+    }
+}
+
+@media only screen and (min-width: 323px) and (max-width: 767px) {
+    .details > h1 {
+        min-height: 81px;
+    }
+}
+
 @media only screen and (min-width: 0px) and (max-width: 767px) {
     .mission_details {
         padding: 1rem 2rem;
@@ -263,10 +283,24 @@
     .slide_image:hover {
         border-color: transparent;
     }
+
+    .endCard {
+        justify-content: flex-start;
+    }
 }
 
 @media only screen and (min-width: 1400px) {
     .swiper_image {
         max-height: 450px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .details > h1 {
+        min-height: 133px;
+    }
+
+    .endCard {
+        justify-content: flex-start;
     }
 }

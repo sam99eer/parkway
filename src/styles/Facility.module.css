@@ -1,6 +1,6 @@
 .facility {
-    min-height: 60vh;
-    min-height: 60svh;
+    min-height: 95vh;
+    min-height: 95svh;
     background-image: url('../assets/images/banner_facilities.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -145,6 +145,11 @@
 
     .facility_card .arrow {
         display: none;
+    }
+
+    .facility {
+        min-height: 60vh;
+        min-height: 60svh;
     }
 }
 
