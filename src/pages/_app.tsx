@@ -3,6 +3,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import type { AppProps } from 'next/app';
+import localFont from 'next/font/local';
 import Head from 'next/head';
 import { useEffect } from 'react';
 import 'swiper/css';
@@ -10,6 +11,11 @@ import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/thumbs';
+
+const agencyFont = localFont({ src: '../../public/fonts/AgencyFB.woff' });
+const papyrusFont = localFont({
+    src: '../../public/fonts/papyrus-webfont.woff',
+});
 
 export default function App({ Component, pageProps }: AppProps) {
     useEffect(() => {
@@ -60,6 +66,13 @@ export default function App({ Component, pageProps }: AppProps) {
                 />
                 <link rel='manifest' href='/favicon/site.webmanifest' />
             </Head>
+            <style jsx global>{`
+                :root {
+                    /* ... */
+                    --font-papyrus: ${papyrusFont.style.fontFamily};
+                    --font-agency: ${agencyFont.style.fontFamily};
+                }
+            `}</style>
             <Component {...pageProps} />
         </>
     );
