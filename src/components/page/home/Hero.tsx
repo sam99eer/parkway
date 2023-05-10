@@ -27,7 +27,7 @@ const Hero = (props: { onScroll: () => void }) => {
                                         )
                                         .start();
                                 }}
-                                options={{ loop: true }}
+                                options={{ loop: true, deleteSpeed: 170 }}
                             />
                         </h1>
                         <p>

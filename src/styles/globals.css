@@ -27,6 +27,18 @@
     --font-agency: 'Agency FB';
 }
 
+@font-face {
+    font-family: var(--font-papyrus);
+    src: url('/fonts/PAPYRUS.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: var(--font-agency);
+    src: url('/fonts/AgencyFB.woff') format('woff');
+    font-display: swap;
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -41,18 +53,6 @@ html {
 a {
     color: inherit;
     text-decoration: none;
-}
-
-@font-face {
-    font-family: var(--font-papyrus);
-    src: url('/public/fonts/PAPYRUS.ttf') format('truetype');
-    font-display: swap;
-}
-
-@font-face {
-    font-family: var(--font-agency);
-    src: url('/public/fonts/AgencyFB.woff') format('woff');
-    font-display: swap;
 }
 
 .gallery-slider {
