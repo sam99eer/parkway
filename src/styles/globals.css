@@ -23,8 +23,8 @@
     --parkway-backdrop: rgba(0, 0, 0, 0.75);
     --parkway-footer: #818485;
     --parkway-stroke: #707070;
-    --font-papyrus: 'Papyrus';
-    --font-agency: 'Agency FB';
+    --font-papyrus: PAPYRUS;
+    --font-agency: Agency FB;
 }
 
 @font-face {
