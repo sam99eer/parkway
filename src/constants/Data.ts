@@ -2,8 +2,10 @@ import home1 from '@/assets/images/home1.jpg';
 import home2 from '@/assets/images/home2.jpg';
 import home3 from '@/assets/images/home3.jpg';
 import home4 from '@/assets/images/home4.jpg';
-import MomDaughter from '@/assets/images/mom_and_daughter.jpg';
-import SmilingMan from '@/assets/images/smiling_man.jpg';
+import Slide2 from '@/assets/images/old_people1.jpg';
+import Slide3 from '@/assets/images/old_people2.jpg';
+import Slide4 from '@/assets/images/old_people3.jpg';
+import Slide1 from '@/assets/images/smiling_man.jpg';
 import { ISliderImage } from '@/models/ImageModel';
 
 export const GalleryImages: ISliderImage[] = [
@@ -27,19 +29,19 @@ export const GalleryImages: ISliderImage[] = [
 
 export const BannerImages: ISliderImage[] = [
     {
-        img: SmilingMan,
+        img: Slide1,
         alt: 'Old Man Smiling',
     },
     {
-        img: MomDaughter,
-        alt: 'Mom and Daughter',
+        img: Slide2,
+        alt: 'Grandpa and Grandmother watching laptop',
     },
     {
-        img: home1,
-        alt: 'Slide3',
+        img: Slide3,
+        alt: 'Nurse taking care of Grandma',
     },
     {
-        img: home2,
-        alt: 'Slide4',
+        img: Slide4,
+        alt: 'Laughing people',
     },
 ];

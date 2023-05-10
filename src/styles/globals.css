@@ -28,14 +28,14 @@
 }
 
 @font-face {
-    font-family: var(--font-papyrus);
-    src: url('/fonts/PAPYRUS.ttf') format('truetype');
+    font-family: var(--font-agency);
+    src: url('~public/fonts/AgencyFB.woff') format('woff');
     font-display: swap;
 }
 
 @font-face {
-    font-family: var(--font-agency);
-    src: url('/fonts/AgencyFB.woff') format('woff');
+    font-family: var(--font-papyrus);
+    src: url('~public/fonts/PAPYRUS.ttf') format('truetype');
     font-display: swap;
 }
 
@@ -113,6 +113,7 @@ a {
     height: 600px;
     width: 600px;
     border-radius: 100%;
+    object-fit: cover;
 }
 
 .flip-swiper .swiper-slide {

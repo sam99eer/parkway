@@ -25,6 +25,7 @@ const Hero = (props: { onScroll: () => void }) => {
                                         .typeString(
                                             'Lending Our Hand for the Service of Others'
                                         )
+                                        .pauseFor(4000)
                                         .start();
                                 }}
                                 options={{ loop: true, deleteSpeed: 170 }}
