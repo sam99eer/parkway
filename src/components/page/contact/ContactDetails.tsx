@@ -36,7 +36,7 @@ const ContactDetails = () => {
                         can.
                     </p>
 
-                    <Row className='gy-5 py-5'>
+                    <Row className='py-5'>
                         <Col lg={6} className={styles.address_container}>
                             <div
                                 className={styles.address_info}

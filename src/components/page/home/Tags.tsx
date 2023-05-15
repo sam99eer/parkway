@@ -21,14 +21,14 @@ const Tags = () => {
                     <Col lg={4}>
                         <TagCard
                             icon={<Stethoscope />}
-                            text='Home docotor and therapists'
+                            text='Home doctor and therapists'
                             onClick={navigateHandler}
                         />
                     </Col>
                     <Col lg={4}>
                         <TagCard
                             icon={<Nurse />}
-                            text='Profesional trained staff available'
+                            text='Professional trained staff available'
                             onClick={navigateHandler}
                         />
                     </Col>

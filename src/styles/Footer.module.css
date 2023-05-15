@@ -70,10 +70,10 @@
     }
 
     .footer_container > div:first-child {
-        max-width: 90%;
+        max-width: 100%;
     }
 
     .footer_container > div:first-child p {
-        margin: 0;
+        width: 100%;
     }
 }

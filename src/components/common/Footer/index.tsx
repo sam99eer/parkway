@@ -11,7 +11,7 @@ const Footer = () => {
             <div className={styles.footer_container}>
                 <div>
                     <h2>About Us</h2>
-                    <p className='w-75'>
+                    <p>
                         All of our staff will have the necessary knowledge &
                         trainings to care for our residents.We offer individual
                         assistance in our home on a more personal level{' '}
