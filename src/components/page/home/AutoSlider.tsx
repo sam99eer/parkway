@@ -35,16 +35,25 @@ const AutoSlider = () => {
                 }}
             >
                 <SwiperSlide>
-                    <SlideImage img={Sl_Image1} text='Lorem ipsum temipsum' />
+                    <SlideImage img={Sl_Image1} text='Medication assistance' />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <SlideImage img={Sl_Image2} text='Lorem ipsum temipsum' />
+                    <SlideImage
+                        img={Sl_Image2}
+                        text='Professionally trained staff available 24 hours a day'
+                    />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <SlideImage img={Sl_Image3} text='Lorem ipsum temipsum' />
+                    <SlideImage
+                        img={Sl_Image3}
+                        text="Alzheimer's/Dementia certified"
+                    />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <SlideImage img={Sl_Image4} text='Lorem ipsum temipsum' />
+                    <SlideImage
+                        img={Sl_Image4}
+                        text='Activity/Exercise coordinator on staff'
+                    />
                 </SwiperSlide>
             </Swiper>
         </section>

@@ -51,7 +51,11 @@
     padding: 1.5rem 0rem;
     margin: 3rem auto;
     box-shadow: 0px 6px 12px -6px var(--parkway-black);
-    max-width: 75%;
+    max-width: 85%;
+}
+
+.details {
+    padding: 1rem 0rem;
 }
 
 .details h1 {

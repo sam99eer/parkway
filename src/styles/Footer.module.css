@@ -13,12 +13,12 @@
     color: var(--parkway-light-white);
 }
 
-.footer span {
+.footer span a {
     color: var(--parkway-red);
     position: relative;
 }
 
-.footer span:hover {
+.footer span a:hover {
     cursor: pointer;
     text-decoration: underline;
 }
@@ -46,8 +46,34 @@
 .icon::before {
     content: '';
     height: 2px;
-    width: 80%;
+    width: 70%;
     background-color: var(--parkway-footer);
     position: absolute;
     top: 0;
+}
+
+.footer_container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.footer_container > div:first-child {
+    max-width: 30%;
+}
+
+@media only screen and (max-width: 767px) {
+    .footer_container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .footer_container > div:first-child {
+        max-width: 90%;
+    }
+
+    .footer_container > div:first-child p {
+        margin: 0;
+    }
 }

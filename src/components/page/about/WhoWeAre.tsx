@@ -26,10 +26,14 @@ const WhoWeAre = () => {
                 >
                     Ensuring your loved ones’ wellness and safety
                 </p>
+                <h1>Who we are</h1>
                 <Row className={styles.details}>
                     <Col lg={6} xl={8}>
-                        <h1>Who we are</h1>
-                        <p data-aos='fade-right' data-aos-delay='200'>
+                        <p
+                            className='m-0'
+                            data-aos='fade-right'
+                            data-aos-delay='200'
+                        >
                             <span>Parkway Adult Family Homecare</span> is an
                             adult family home that specializes in care for the
                             elderly with dementia, Alzheimer’s, and Parkinson’s
