@@ -127,7 +127,7 @@ const Header = (props: { activeLink: LINKS }) => {
                         className={`${styles.icons} flex-row justify-content-center justify-content-lg-end`}
                     >
                         <Link
-                            href='https://www.facebook.com/Parkwayadulthomecare/'
+                            href='https://www.facebook.com/people/Parkway-Afh/pfbid0gQoxJQAKGDckTFUaPHDoybsgZrbhgK65RovNRbBuD1zU1HSaMmVCaAvRQ7jeJ7Fgl/?mibextid=LQQJ4d'
                             target="_blank"
                             rel="noopener noreferrer"
                         >
