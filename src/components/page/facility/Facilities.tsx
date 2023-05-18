@@ -63,7 +63,7 @@ const Facilities = () => {
                         <Col xxl={6}>
                             <FacilityCard
                                 img={Img6}
-                                text='Exercise Programe'
+                                text='Exercise Programme'
                                 inverted
                             />
                         </Col>
