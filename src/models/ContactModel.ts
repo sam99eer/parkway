@@ -4,6 +4,7 @@ export interface IContactErrorInterface {
     fullname: boolean;
     email: boolean;
     message: boolean;
+    phone: boolean;
 }
 
 export interface IContactInterface extends NextApiRequest {
@@ -11,5 +12,6 @@ export interface IContactInterface extends NextApiRequest {
         fullname: string;
         email: string;
         message: string;
+        phone: string;
     };
 }

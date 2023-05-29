@@ -10,12 +10,14 @@ import Col from 'react-bootstrap/Col';
 const ContactForm = () => {
     const fullNameRef = useRef<HTMLInputElement>(null);
     const emailRef = useRef<HTMLInputElement>(null);
+    const phoneRef = useRef<HTMLInputElement>(null);
     const messageRef = useRef<HTMLTextAreaElement>(null);
 
     const [error, setError] = useState<IContactErrorInterface>({
         email: false,
         fullname: false,
         message: false,
+        phone: false,
     });
 
     const [flag, setFlag] = useState<ILoadingModel>({
@@ -44,6 +46,7 @@ const ContactForm = () => {
             email: false,
             fullname: false,
             message: false,
+            phone: false,
         });
 
         if (
@@ -82,6 +85,18 @@ const ContactForm = () => {
             return;
         }
 
+        if (
+            phoneRef.current!.value.trim() === '' ||
+            phoneRef.current!.value.trim().length < 10 ||
+            phoneRef.current!.value.length > 20
+        ) {
+            setError((oldState) => ({
+                ...oldState,
+                phone: true,
+            }));
+            return;
+        }
+
         setFlag((oldState) => ({
             ...oldState,
             loading: true,
@@ -96,6 +111,7 @@ const ContactForm = () => {
                 fullname: fullNameRef.current!.value,
                 email: emailRef.current!.value,
                 message: messageRef.current!.value,
+                phone: phoneRef.current!.value,
             }),
         })
             .then((res) => res.json())
@@ -115,6 +131,7 @@ const ContactForm = () => {
                     fullNameRef.current!.value = '';
                     emailRef.current!.value = '';
                     messageRef.current!.value = '';
+                    phoneRef.current!.value = '';
                     return;
                 }
                 setPopup({
@@ -173,6 +190,16 @@ const ContactForm = () => {
                     />
                     <p className='error'>
                         {!!error.email ? 'Please enter valid email' : ''}
+                    </p>
+                    <input
+                        type='tel'
+                        placeholder='Contact Number'
+                        maxLength={20}
+                        ref={phoneRef}
+                        required
+                    />
+                    <p className='error'>
+                        {!!error.email ? 'Please enter valid Contact Number' : ''}
                     </p>
 
                     <textarea
